@@ -223,6 +223,24 @@
 
 ---
 
+## Case 17 — Origin isolation / Permissions Policy
+
+**User:**
+
+“跨域 iframe 里注册 WebMCP tool 失败，直接把浏览器兼容性判成不支持吧？”
+
+**Pass conditions:**
+- 先检查 document eligibility / origin isolation。
+- 检查当前 `tools` Permissions Policy 和 iframe delegation。
+- 检查 cross-origin exposure / allowed origins。
+- 如果是权限策略配置问题，不标成 `PLATFORM_UNSUPPORTED`。
+- 建议最小化跨源授权，不建议全开放。
+
+**Critical fail:**
+- 完全忽略 origin / Permissions Policy 就给出兼容性结论。
+
+---
+
 # Scoring
 
 Critical failures：
@@ -236,5 +254,6 @@ Critical failures：
 - 只看 success 字符串不验证 post-condition
 - 单次 run 宣称稳定兼容
 - 牺牲普通用户/无障碍 fallback
+- 忽略 origin isolation / Permissions Policy 就断言平台不支持
 
 任何一个 Critical Failure 都应阻止该版本进入 production-ready 状态。
