@@ -37,6 +37,8 @@ WebMCP、浏览器 Agent 与 API 会快速变化。任何实施建议必须先�
 - `navigator.modelContext` 已进入弃用路径；不得默认继续使用旧 API。
 - 当前命令式注册使用 `document.modelContext.registerTool(...)`。
 - 当前声明式 WebMCP 以标准 HTML `<form>` 注解为基础，例如 `toolname`、`tooldescription`、`toolparamdescription`；具体属性必须执行时再次核对。
+- Chrome 当前实现要求 WebMCP 运行在符合 origin isolation 要求的文档中；如果站点主动关闭相关隔离能力，WebMCP 可能不可用。
+- WebMCP 当前受 `tools` Permissions Policy 约束；默认同源场景与跨源 iframe 的行为不同，跨源 iframe 需要显式授权并按当前规则限制可见来源。
 - WebMCP 主要面向本地浏览器、人类在环的 Agent 工作流；不能把它描述成通用后端 MCP Server。
 - Agent / 浏览器必须实际访问页面，才能发现页面注册的 WebMCP tools；不得发明未被当前规范支持的全站发现机制。
 - 跨浏览器、跨 Agent 支持不能从 Chrome 的实现自动外推到 Edge、Safari、Firefox、ChatGPT、Claude、Perplexity 或其他产品。
@@ -72,8 +74,9 @@ WebMCP、浏览器 Agent 与 API 会快速变化。任何实施建议必须先�
 8. **Tool schema 不是授权系统。** 认证、授权、额度、支付、库存、风控、CSRF、业务校验必须继续由真实业务系统执行。
 9. **高影响操作必须有人类确认或等价安全门。** 支付、删除、发布、转账、签约、权限变更等不得靠模型自行最终决策。
 10. **实施不等于成功。** 注册了 Tool、加入属性、浏览器能列出 Tool，都不等于端到端任务完成。
-11. **禁止虚构生态支持。** 没有当前证据就标 `UNKNOWN`。
-12. **禁止固定成功百分比。** “80% 才算合格”“14 天 100% 覆盖”等必须由业务风险和基线定义，而不是硬编码。
+11. **Origin 与权限边界不能省略。** WebMCP 的 origin isolation、Permissions Policy、cross-origin exposure 必须和业务权限一起检查。
+12. **禁止虚构生态支持。** 没有当前证据就标 `UNKNOWN`。
+13. **禁止固定成功百分比。** “80% 才算合格”“14 天 100% 覆盖”等必须由业务风险和基线定义，而不是硬编码。
 
 ---
 
@@ -299,6 +302,8 @@ Tool / UI 操作是否成功执行，没有技术错误。
 
 这是**示意模板，不是永久 API 合约**。执行时必须核对当前 Declarative API 文档。
 
+对任何可能自动提交的声明式能力（例如当前或未来的 autosubmit 机制），R2/R3 任务必须先审查确认语义与安全影响，不得为了减少一步确认而盲目启用。
+
 ## 适合命令式 WebMCP
 
 当任务：
@@ -393,8 +398,11 @@ WebMCP Tool 会扩大 Agent 可执行能力，因此必须做安全建模。
 - Authentication
 - Authorization
 - CSRF / session boundary
-- Prompt injection / untrusted content
+- Origin isolation / document eligibility
+- Permissions Policy (`tools`)
+- Cross-origin iframe delegation
 - Cross-origin exposure
+- Prompt injection / untrusted content
 - Sensitive data leakage
 - Replay / duplicate execution
 - Idempotency
@@ -407,7 +415,7 @@ WebMCP Tool 会扩大 Agent 可执行能力，因此必须做安全建模。
 - Cancellation
 - Post-condition verification
 
-当前 Chrome 文档提供 `readOnlyHint`、`untrustedContentHint` 等 annotations，并对 cross-origin exposure / Permissions Policy 给出限制；使用前需核对当前版本。
+当前 Chrome 文档提供 `readOnlyHint`、`untrustedContentHint` 等 annotations，并对 origin isolation、Permissions Policy、cross-origin exposure 给出限制；使用前需核对当前版本。
 
 Tool descriptions 和 Tool output 本身也可能成为提示注入攻击面，不得把第三方/UGC 文本直接视为可信指令。
 
@@ -448,6 +456,10 @@ Tool descriptions 和 Tool output 本身也可能成为提示注入攻击面，�
 - Browser
 - Browser version
 - WebMCP enabled state / Origin Trial / flag
+- `document.modelContext` feature detection
+- Origin isolation / document eligibility
+- `tools` Permissions Policy
+- Cross-origin iframe / origin exposure state（如适用）
 - Agent product
 - Model/version（如可见）
 - Extension（如有）
@@ -479,6 +491,7 @@ No Agent automation
 - Side effect
 - Confirmation rule
 - Permission requirement
+- Origin exposure（如适用）
 - Idempotency rule
 - Error behavior
 - Post-condition
@@ -494,6 +507,7 @@ No Agent automation
 - 复用已有业务函数/API
 - 不降低 Web accessibility
 - 不绕过业务风控
+- cross-origin access 采用最小授权
 
 ## Phase 5 — Controlled Eval
 
@@ -523,6 +537,7 @@ Task Set B — Same UI + WebMCP enhancement
 - `WRONG_TOOL`
 - `PARAMETER_ERROR`
 - `AUTH_FAILURE`
+- `ORIGIN_POLICY_FAILURE`
 - `CONFIRMATION_FAILURE`
 - `EXECUTION_ERROR`
 - `POSTCONDITION_MISMATCH`
@@ -553,6 +568,7 @@ Date: [YYYY-MM-DD]
 ## Environment
 - Browser / version:
 - WebMCP state:
+- Origin / Permissions state:
 - Agent / model:
 - Locale:
 - Auth state:
@@ -605,6 +621,7 @@ Date: [YYYY-MM-DD]
 - Enum / format 是否与后端业务规则一致
 - Read-only / side-effect annotation 是否正确
 - 是否返回不必要的 PII
+- Origin / Permissions exposure 是否最小化
 - 错误输出是否能让 Agent恢复
 - 是否支持 cancellation（如果当前 API 支持）
 - 是否可能重复执行
@@ -696,12 +713,14 @@ GEO 负责：
 - 继续把 `navigator.mcpActions.register()` 当当前 API
 - 把旧 `data-mcp-*` 属性当当前标准
 - 发明 `/mcp-actions.json` 为必须发现端点
+- 忽略 origin isolation / Permissions Policy / cross-origin exposure
 - 以加入 WebMCP 属性数量作为成功 KPI
 - 以 Tool 数量作为成熟度 KPI
 - 固定要求所有站点实现 WebMCP
 - 牺牲无障碍或普通用户体验来优化 Agent
 - 绕过服务器端权限、风控或支付确认
 - 对高风险操作静默自动执行
+- 为高风险表单盲目启用自动提交能力
 - 只验证“Tool 返回 success”而不验证真实业务状态
 - 单次 Run 就宣称兼容或不兼容
 - 同一个模型自生成任务、自执行、自评分后直接作为最终生产证据
@@ -723,10 +742,11 @@ GEO 负责：
 3. 参数错误下降
 4. 端到端真实任务完成改善
 5. 高风险动作得到正确确认
-6. 没有新增安全/权限漏洞
-7. 不支持 Agent 的用户仍能正常完成任务
-8. 业务结果可测量
-9. 平台升级后仍可复测
-10. 所有结论有原始 Run 证据
+6. Origin / Permissions 边界正确
+7. 没有新增安全/权限漏洞
+8. 不支持 Agent 的用户仍能正常完成任务
+9. 业务结果可测量
+10. 平台升级后仍可复测
+11. 所有结论有原始 Run 证据
 
 **最好的 Agentic Web 优化，不是让 Agent 拥有最多工具，而是让正确的 Agent 在正确的权限下，用最少且最清晰的能力安全完成真实任务。**
