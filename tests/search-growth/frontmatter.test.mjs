@@ -1,9 +1,14 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, rmSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import { tmpdir } from 'node:os';
 import test from 'node:test';
 
-import { discoverAgentFiles, validateAgentText } from '../../lib/search-growth/frontmatter.mjs';
+import {
+  discoverAgentFiles,
+  loadAgents,
+  validateAgentText,
+} from '../../lib/search-growth/frontmatter.mjs';
 
 const root = resolve(import.meta.dirname, '..', '..');
 
@@ -33,4 +38,19 @@ test('rejects missing delimiters and required fields', () => {
 
   const missingField = validateAgentText(`---\nname: Test\ndescription: Test\ncolor: blue\n---\n# Body`, { path: 'field.md' });
   assert.ok(missingField.errors.some((error) => error.message.includes("'emoji'")));
+});
+
+test('enumerates an agent without frontmatter so agent validation fails loudly', () => {
+  const fixtureRoot = mkdtempSync(join(tmpdir(), 'search-growth-agent-'));
+  try {
+    mkdirSync(join(fixtureRoot, 'marketing'), { recursive: true });
+    writeFileSync(join(fixtureRoot, 'marketing', 'broken-agent.md'), '# Missing frontmatter\n', 'utf8');
+
+    assert.deepEqual(discoverAgentFiles(fixtureRoot), ['marketing/broken-agent.md']);
+    const [agent] = loadAgents(fixtureRoot);
+    assert.equal(agent.filePath, 'marketing/broken-agent.md');
+    assert.ok(agent.errors.some((error) => error.code === 'FRONTMATTER_MISSING'));
+  } finally {
+    rmSync(fixtureRoot, { recursive: true, force: true });
+  }
 });

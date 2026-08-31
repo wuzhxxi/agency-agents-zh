@@ -52,11 +52,19 @@
     "supply-chain/",
     "support/",
     "testing/",
+    "lib/search-growth/",
+    "scripts/search-growth.mjs",
+    "search-growth/",
+    "evals/",
+    "docs/search-growth-engineering.md",
+    "SEARCH-GROWTH-STACK.md",
+    "CATALOG.md",
     "README.md",
+    "README.zh-TW.md",
     "AGENT-LIST.md",
     "LICENSE"
   ],
-  "devDependencies": {
+  "dependencies": {
     "ajv": "^8.20.0",
     "yaml": "^2.9.0"
   }

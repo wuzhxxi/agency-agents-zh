@@ -92,6 +92,8 @@ npm test
 npm run validate:search-growth
 ```
 
+CLI 也作为 npm package 提供：`bin.search-growth` 保持可执行入口，`yaml` 和 `ajv` 位于 runtime `dependencies`，并将 CLI 需要的模块、Registry、schemas、eval manifest、Agent Markdown、目录与文档资源列入 `files`。发布前可用 `npm pack`，再从生成的 tarball 安装并运行上述校验命令；这保证全局/依赖安装不会依赖仓库工作目录中的未打包文件。
+
 ## CI
 
 `.github/workflows/search-growth-engineering.yml` 在指向 `main` 的相关 Pull Request 上使用 Node 22 和 lockfile 运行全部测试及静态校验。流程不访问第三方平台，不需要 secrets 或 API key。
