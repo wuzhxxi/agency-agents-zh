@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "agents": [
+    {
+      "id": "aeo-foundations",
+      "name": "AEO 基础架构师",
+      "file_path": "marketing/marketing-aeo-foundations.md",
+      "role": "Technical access and retrieval foundations",
+      "responsibilities": [
+        "crawler and user-triggered access boundaries",
+        "robots, indexability, WAF/CDN, rendering, and logs",
+        "platform-specific discovery asset verification"
+      ],
+      "handoff_targets": [
+        "seo-specialist",
+        "ai-citation-strategist",
+        "agentic-search-optimizer",
+        "search-growth-orchestrator"
+      ],
+      "eval_path": "evals/marketing/aeo-foundations-v2.md",
+      "status": "active"
+    },
+    {
+      "id": "seo-specialist",
+      "name": "SEO 与自然搜索增长专家",
+      "file_path": "marketing/marketing-seo-specialist.md",
+      "role": "Organic search visibility and business growth",
+      "responsibilities": [
+        "technical SEO and Google Search eligibility",
+        "search demand, intent, content architecture, and authority",
+        "organic conversion and business attribution"
+      ],
+      "handoff_targets": [
+        "aeo-foundations",
+        "ai-citation-strategist",
+        "agentic-search-optimizer",
+        "search-growth-orchestrator"
+      ],
+      "eval_path": "evals/marketing/seo-specialist-v2.md",
+      "status": "active"
+    },
+    {
+      "id": "ai-citation-strategist",
+      "name": "AI 搜索可见性与 GEO 策略师",
+      "file_path": "marketing/marketing-ai-citation-strategist.md",
+      "role": "GEO and AI search visibility measurement",
+      "responsibilities": [
+        "prompt universe and run design",
+        "mention, recommendation, citation, and source graph analysis",
+        "AI referral and assisted conversion measurement"
+      ],
+      "handoff_targets": [
+        "aeo-foundations",
+        "seo-specialist",
+        "agentic-search-optimizer",
+        "search-growth-orchestrator"
+      ],
+      "eval_path": "evals/marketing/ai-citation-strategist-v2.md",
+      "status": "active"
+    },
+    {
+      "id": "agentic-search-optimizer",
+      "name": "智能体任务完成优化师",
+      "file_path": "marketing/marketing-agentic-search-optimizer.md",
+      "role": "Safe agentic task completion",
+      "responsibilities": [
+        "task universe and risk classification",
+        "semantic HTML, accessibility, and optional WebMCP design",
+        "end-to-end completion, confirmation, post-condition, and safety validation"
+      ],
+      "handoff_targets": [
+        "aeo-foundations",
+        "seo-specialist",
+        "ai-citation-strategist",
+        "search-growth-orchestrator"
+      ],
+      "eval_path": "evals/marketing/agentic-search-optimizer-v2.md",
+      "status": "active"
+    },
+    {
+      "id": "search-growth-orchestrator",
+      "name": "搜索增长编排器",
+      "file_path": "marketing/marketing-search-growth-orchestrator.md",
+      "role": "Search Growth routing and unified prioritization",
+      "responsibilities": [
+        "route work to the minimum necessary specialist agents",
+        "deduplicate findings and manage dependencies and risk",
+        "produce a unified backlog and business measurement plan"
+      ],
+      "handoff_targets": [
+        "aeo-foundations",
+        "seo-specialist",
+        "ai-citation-strategist",
+        "agentic-search-optimizer"
+      ],
+      "eval_path": null,
+      "status": "active"
+    }
+  ]
+}

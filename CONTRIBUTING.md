@@ -11,7 +11,7 @@
 翻译的时候注意：
 - 不要逐字翻译，用自然的中文表达
 - 代码示例里的注释也要翻译
-- 保持 frontmatter 格式不变（name、description、color）
+- 保持 frontmatter 格式不变（name、description、color、emoji）
 
 ### 2. 创建中国市场原创智能体
 
@@ -28,6 +28,7 @@
 name: 智能体名称
 description: 一句话描述这个智能体干什么
 color: 颜色名称
+emoji: 🧭
 ---
 
 # 智能体名称

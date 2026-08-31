@@ -1,0 +1,14 @@
+{
+  "platform": "fixture-only",
+  "prompt": "Schema fixture prompt",
+  "prompt_family": "fixture",
+  "provenance": "SYNTHETIC",
+  "locale": "und",
+  "run_id": "fixture-prompt-run",
+  "timestamp": "2026-01-01T00:00:00Z",
+  "mention": null,
+  "recommendation": null,
+  "owned_citation": null,
+  "earned_citation": null,
+  "cited_sources": []
+}

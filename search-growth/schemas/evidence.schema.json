@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agency-agents-zh.local/search-growth/evidence.schema.json",
+  "title": "Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["state", "source", "observed_at", "notes"],
+  "properties": {
+    "state": {
+      "type": "string",
+      "enum": ["VERIFIED", "PROVIDED", "OBSERVED", "INFERRED", "HYPOTHESIS", "UNKNOWN"]
+    },
+    "source": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "observed_at": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

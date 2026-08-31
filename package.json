@@ -1,9 +1,15 @@
 {
   "name": "agency-agents-zh",
   "version": "1.4.0",
-  "description": "276 个即插即用的 AI 专家角色定义 — 从 CEO/CTO 高管层到前端开发、区块链安全，从小红书运营到抖音策略",
+  "description": "277 个即插即用的 AI 专家角色定义 — 从 CEO/CTO 高管层到前端开发、区块链安全，从小红书运营到抖音策略",
   "scripts": {
-    "check:counts": "node scripts/check-counts.mjs"
+    "check:counts": "node scripts/check-counts.mjs",
+    "search-growth": "node scripts/search-growth.mjs",
+    "validate:search-growth": "node scripts/search-growth.mjs agents validate && node scripts/search-growth.mjs schemas validate && node scripts/search-growth.mjs regressions check && node scripts/search-growth.mjs evals validate && node scripts/search-growth.mjs catalog check",
+    "test": "node --test \"tests/search-growth/*.test.mjs\""
+  },
+  "bin": {
+    "search-growth": "scripts/search-growth.mjs"
   },
   "keywords": [
     "ai-agents",
@@ -46,8 +52,20 @@
     "supply-chain/",
     "support/",
     "testing/",
+    "lib/search-growth/",
+    "scripts/search-growth.mjs",
+    "search-growth/",
+    "evals/",
+    "docs/search-growth-engineering.md",
+    "SEARCH-GROWTH-STACK.md",
+    "CATALOG.md",
     "README.md",
+    "README.zh-TW.md",
     "AGENT-LIST.md",
     "LICENSE"
-  ]
+  ],
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "yaml": "^2.9.0"
+  }
 }

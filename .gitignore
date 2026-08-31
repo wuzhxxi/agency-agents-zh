@@ -2,6 +2,7 @@
 integrations/
 .claude/
 .codex/
+node_modules/
 
 # macOS
 .DS_Store

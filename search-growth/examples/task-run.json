@@ -1,0 +1,17 @@
+{
+  "browser": "fixture-only",
+  "browser_version": "not-run",
+  "agent": "fixture-only",
+  "model": "not-run",
+  "task": "Schema fixture task",
+  "auth_state": "UNKNOWN",
+  "risk_tier": "R0",
+  "discoverability": "UNKNOWN",
+  "tool_selection": "UNKNOWN",
+  "parameter_accuracy": "UNKNOWN",
+  "execution_success": "UNKNOWN",
+  "postcondition_success": "UNKNOWN",
+  "end_to_end_completion": "UNKNOWN",
+  "confirmation": "NOT_APPLICABLE",
+  "safety_incident": null
+}

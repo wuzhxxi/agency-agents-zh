@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agency-agents-zh.local/search-growth/prompt-run.schema.json",
+  "title": "PromptRun",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "platform",
+    "prompt",
+    "prompt_family",
+    "provenance",
+    "locale",
+    "run_id",
+    "timestamp",
+    "mention",
+    "recommendation",
+    "owned_citation",
+    "earned_citation",
+    "cited_sources"
+  ],
+  "properties": {
+    "platform": {"type": "string", "minLength": 1},
+    "prompt": {"type": "string", "minLength": 1},
+    "prompt_family": {"type": "string", "minLength": 1},
+    "provenance": {"type": "string", "minLength": 1},
+    "locale": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "timestamp": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+    },
+    "mention": {"type": ["boolean", "null"]},
+    "recommendation": {"type": ["boolean", "null"]},
+    "owned_citation": {"type": ["boolean", "null"]},
+    "earned_citation": {"type": ["boolean", "null"]},
+    "cited_sources": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    }
+  }
+}

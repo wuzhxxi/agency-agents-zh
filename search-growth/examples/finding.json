@@ -1,0 +1,19 @@
+{
+  "id": "fixture-finding",
+  "title": "Example finding for schema validation",
+  "agent": "aeo-foundations",
+  "evidence": [
+    {
+      "state": "UNKNOWN",
+      "source": null,
+      "observed_at": null,
+      "notes": "Fixture data, not a real audit result."
+    }
+  ],
+  "business_impact": "UNKNOWN",
+  "confidence": "UNKNOWN",
+  "effort": "UNKNOWN",
+  "affected_assets": ["fixture://asset"],
+  "recommendation": "Collect evidence before making a recommendation.",
+  "validation_method": "Replace the fixture with a reproducible observation."
+}
