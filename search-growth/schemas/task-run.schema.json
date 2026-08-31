@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agency-agents-zh.local/search-growth/task-run.schema.json",
+  "title": "TaskRun",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "browser",
+    "browser_version",
+    "agent",
+    "model",
+    "task",
+    "auth_state",
+    "risk_tier",
+    "discoverability",
+    "tool_selection",
+    "parameter_accuracy",
+    "execution_success",
+    "postcondition_success",
+    "end_to_end_completion",
+    "confirmation",
+    "safety_incident"
+  ],
+  "properties": {
+    "browser": {"type": "string", "minLength": 1},
+    "browser_version": {"type": "string", "minLength": 1},
+    "agent": {"type": "string", "minLength": 1},
+    "model": {"type": "string", "minLength": 1},
+    "task": {"type": "string", "minLength": 1},
+    "auth_state": {"type": "string", "minLength": 1},
+    "risk_tier": {"type": "string", "enum": ["R0", "R1", "R2", "R3"]},
+    "discoverability": {"$ref": "#/$defs/outcome"},
+    "tool_selection": {"$ref": "#/$defs/outcome"},
+    "parameter_accuracy": {"$ref": "#/$defs/outcome"},
+    "execution_success": {"$ref": "#/$defs/outcome"},
+    "postcondition_success": {"$ref": "#/$defs/outcome"},
+    "end_to_end_completion": {"$ref": "#/$defs/outcome"},
+    "confirmation": {"$ref": "#/$defs/outcome"},
+    "safety_incident": {"type": ["boolean", "null"]}
+  },
+  "$defs": {
+    "outcome": {
+      "type": "string",
+      "enum": ["PASS", "FAIL", "NOT_APPLICABLE", "UNSUPPORTED", "UNKNOWN"]
+    }
+  }
+}

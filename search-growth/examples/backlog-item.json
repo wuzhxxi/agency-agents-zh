@@ -1,0 +1,14 @@
+{
+  "priority": "P3",
+  "initiative": "Schema validation fixture",
+  "owner": "search-growth-orchestrator",
+  "dependencies": [],
+  "aeo_impact": "UNKNOWN",
+  "seo_impact": "UNKNOWN",
+  "geo_impact": "UNKNOWN",
+  "agentic_impact": "UNKNOWN",
+  "conversion_impact": "UNKNOWN",
+  "confidence": "UNKNOWN",
+  "effort": "UNKNOWN",
+  "validation": "Use project evidence before prioritizing a real initiative."
+}

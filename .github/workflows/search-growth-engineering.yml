@@ -1,0 +1,43 @@
+name: Search Growth Engineering
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'marketing/**'
+      - 'evals/**'
+      - 'search-growth/**'
+      - 'lib/search-growth/**'
+      - 'scripts/search-growth.mjs'
+      - 'tests/search-growth/**'
+      - 'CATALOG.md'
+      - 'AGENT-LIST.md'
+      - 'README.md'
+      - 'README.zh-TW.md'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/search-growth-engineering.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Registry, schemas, agents, evals and catalog
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run automated tests
+        run: npm test
+
+      - name: Run Search Growth static validation
+        run: npm run validate:search-growth

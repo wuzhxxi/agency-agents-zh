@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "evaluations": [
+    {
+      "id": "aeo-foundations-v2",
+      "agent_id": "aeo-foundations",
+      "path": "evals/marketing/aeo-foundations-v2.md",
+      "evaluation_mode": "human_or_llm",
+      "status": "pending",
+      "expected_cases": 12,
+      "critical_case_ids": [1, 2, 3, 4, 5, 6, 7, 10, 12]
+    },
+    {
+      "id": "agentic-search-optimizer-v2",
+      "agent_id": "agentic-search-optimizer",
+      "path": "evals/marketing/agentic-search-optimizer-v2.md",
+      "evaluation_mode": "human_or_llm",
+      "status": "pending",
+      "expected_cases": 17,
+      "critical_case_ids": [1, 2, 3, 4, 8, 9, 10, 11, 14, 17]
+    },
+    {
+      "id": "ai-citation-strategist-v2",
+      "agent_id": "ai-citation-strategist",
+      "path": "evals/marketing/ai-citation-strategist-v2.md",
+      "evaluation_mode": "human_or_llm",
+      "status": "pending",
+      "expected_cases": 14,
+      "critical_case_ids": [1, 2, 3, 4, 5, 9, 10, 13]
+    },
+    {
+      "id": "seo-specialist-v2",
+      "agent_id": "seo-specialist",
+      "path": "evals/marketing/seo-specialist-v2.md",
+      "evaluation_mode": "human_or_llm",
+      "status": "pending",
+      "expected_cases": 8,
+      "critical_case_ids": [1, 2]
+    }
+  ]
+}

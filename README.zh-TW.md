@@ -2,7 +2,7 @@
 
 🌐 [簡體中文](README.md) | **繁體中文** | [English (upstream)](https://github.com/msitarzewski/agency-agents)
 
-> **276 個即插即用的 AI 專家角色** — 覆蓋公司經營（CEO/CTO/CMO/COO/CPO/CFO）、工程、設計、行銷、產品、遊戲、安全、GIS、金融等 20 個部門。不是通用提示詞範本，每個智能體都有獨立的人設、專業流程和可交付成果。支援 Claude Code / Cursor / Copilot 等 18 種 AI 程式設計工具。
+> **277 個即插即用的 AI 專家角色** — 覆蓋公司經營（CEO/CTO/CMO/COO/CPO/CFO）、工程、設計、行銷、產品、遊戲、安全、GIS、金融等 20 個部門。不是通用提示詞範本，每個智能體都有獨立的人設、專業流程和可交付成果。支援 Claude Code / Cursor / Copilot 等 18 種 AI 程式設計工具。
 
 [agency-agents](https://github.com/msitarzewski/agency-agents) 的中文社群版。在完整翻譯上游的基礎上，新增了 63 個中國市場原創智能體（小紅書、抖音、微信、B站、飛書、釘釘等平台運營，以及跨境電商、政務ToG、醫療合規、Qt 工業上位機、機械設計、畜禽養殖檔案核對等垂直領域）。
 
@@ -19,9 +19,9 @@
 
 ### 📊 專案規模
 
-| 🤖 AI 智能體 | 🌏 英文版翻譯 | 🇨🇳 中國市場原創 | 🧠 支援工具 | 🏢 部門 |
-|:---:|:---:|:---:|:---:|:---:|
-| **276** | **213** | **63** | **18 種** | **20 個** |
+| 🤖 AI 智能體 | 🌏 英文版翻譯 | 🇨🇳 中國市場原創 | 🧭 搜尋增長方法論 | 🧠 支援工具 | 🏢 部門 |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| **277** | **213** | **63** | **1** | **18 種** | **20 個** |
 
 > 📖 **免費配套學習** → [從零學會 AI 程式設計](https://aiolaola.com/?utm_source=github&utm_campaign=agents)：180 節免費實操課 + 《AI 程式設計實戰三卷書》線上閱讀 + 實戰社群 · 把這個倉的 216 個角色裝進 Claude Code / Cursor / Codex 後配合方法論更高效 · 永久免費
 
@@ -181,7 +181,7 @@ ao compose "幫我寫一篇關於 AI Agent 的深度分析文章" --run
 
 ## 🖼️ 線上瀏覽全部專家（無需安裝）
 
-搜尋 / 按部門篩選 / 查看與**複製每位專家的完整提示詞** —— 全部 276 位，直接在瀏覽器裡看：
+搜尋 / 按部門篩選 / 查看與**複製每位專家的完整提示詞** —— 全部 277 位，直接在瀏覽器裡看：
 
 <p align="center">
   <a href="https://ao.aiolaola.com/experts">
@@ -375,7 +375,11 @@ cp -r marketing/*.md ~/.claude/agents/
 | [增長駭客](marketing/marketing-growth-hacker.md) | 快速獲客、病毒迴圈、實驗 | 使用者增長、轉化最佳化 |
 | [內容創作者](marketing/marketing-content-creator.md) | 多平臺內容、編輯日曆 | 內容策略、品牌故事 |
 | [社交媒體策略師](marketing/marketing-social-media-strategist.md) | 跨平臺策略、整合營銷 | 全渠道社交運營 |
-| [SEO 專家](marketing/marketing-seo-specialist.md) | 搜尋引擎最佳化、技術 SEO | Google SEO、內容最佳化 |
+| [AEO 基礎架構師](marketing/marketing-aeo-foundations.md) | 爬蟲存取、索引、渲染與內容可存取性 | SEO、GEO 與瀏覽型 Agent 的技術地基 |
+| [SEO 與自然搜尋增長專家](marketing/marketing-seo-specialist.md) | 搜尋需求與意圖、技術 SEO、內容架構與歸因 | 自然搜尋增長與轉化 |
+| [AI 搜尋可見性與 GEO 策略師](marketing/marketing-ai-citation-strategist.md) | 提示詞審計、品牌提及與推薦、引用來源 | AI 搜尋可見性與流量歸因 |
+| [智能體任務完成最佳化師](marketing/marketing-agentic-search-optimizer.md) | 任務可發現性、工具選擇、安全執行與後置條件 | 預約、購買、註冊等任務完成 |
+| [搜尋增長編排器](marketing/marketing-search-growth-orchestrator.md) | 路由四個專業 Agent，統一證據、優先級與路線圖 | 跨層搜尋增長規劃 |
 | [輪播圖增長引擎](marketing/marketing-carousel-growth-engine.md) | 輪播圖內容、自動化投放 | 社交媒體輪播素材 |
 | [LinkedIn 內容創作專家](marketing/marketing-linkedin-content-creator.md) | LinkedIn 職場內容、B2B 獲客 | LinkedIn 品牌建設 |
 | [圖書聯合作者](marketing/marketing-book-co-author.md) | 思想領袖力圖書、代筆協作 | 圖書策劃與撰寫 |
