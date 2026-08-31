@@ -78,13 +78,19 @@ test('packs and installs a runnable CLI with all runtime resources', { timeout: 
       ['evals', 'validate'],
       ['catalog', 'check'],
     ]) {
-      // Invoke the installed package entrypoint directly to avoid shell quoting
-      // differences on Windows; the .bin shim is asserted above as well.
-      const result = spawnSync(process.execPath, [installedCli, ...command, '--json'], {
-        cwd: installDirectory,
-        encoding: 'utf8',
-        timeout: 120_000,
-      });
+      // Windows .cmd shims are shell-bound and the workspace path may contain
+      // an ampersand; invoke the same installed entrypoint directly there.
+      const result = process.platform === 'win32'
+        ? spawnSync(process.execPath, [installedCli, ...command, '--json'], {
+          cwd: installDirectory,
+          encoding: 'utf8',
+          timeout: 120_000,
+        })
+        : spawnSync(binPath, [...command, '--json'], {
+          cwd: installDirectory,
+          encoding: 'utf8',
+          timeout: 120_000,
+        });
       assert.equal(result.status, 0, `${command.join(' ')}\n${result.stdout}\n${result.stderr}`);
       assert.equal(JSON.parse(result.stdout).ok, true, command.join(' '));
     }
