@@ -27,6 +27,8 @@
 #   hermes       -- 复制到 ~/.hermes/skills/（全局）
 #   kiro         -- 复制到 ~/.kiro/agents/（全局）
 #   qoder        -- 复制到 .qoder/agents/（项目级）
+#   zcode        -- 复制到 ~/.zcode/agents/（全局，智谱 ZCode）
+#   qwenpaw      -- 复制到 ~/.qwenpaw/skill_pool/（全局）
 #   all          -- 安装所有已检测到的工具（默认）
 #
 # Hermes 专属参数：
@@ -67,11 +69,11 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 INTEGRATIONS="$REPO_ROOT/integrations"
 
-ALL_TOOLS=(claude-code copilot antigravity gemini-cli opencode openclaw cursor trae aider windsurf qwen codex deerflow workbuddy codewhale hermes kiro qoder)
+ALL_TOOLS=(claude-code copilot antigravity gemini-cli opencode openclaw cursor trae aider windsurf qwen codex deerflow workbuddy codewhale hermes kiro qoder zcode qwenpaw)
 
 # --- 用法 ---
 usage() {
-  sed -n '3,47p' "$0" | sed 's/^# \{0,1\}//'
+  sed -n '3,49p' "$0" | sed 's/^# \{0,1\}//'
   exit 0
 }
 
@@ -99,6 +101,8 @@ detect_codex()        { command -v codex >/dev/null 2>&1 || [[ -d "${HOME}/.code
 detect_deerflow()     { command -v deerflow >/dev/null 2>&1 || [[ -d "${HOME}/.deerflow" ]] || docker ps --format '{{.Names}}' 2>/dev/null | grep -q deerflow; }
 detect_workbuddy()    { command -v workbuddy >/dev/null 2>&1 || [[ -d "${HOME}/.workbuddy" ]]; }
 detect_codewhale()    { command -v codewhale >/dev/null 2>&1 || [[ -d "${HOME}/.codewhale" ]] || [[ -d "${HOME}/.deepseek" ]]; }
+detect_zcode()        { command -v zcode >/dev/null 2>&1 || [[ -d "${HOME}/.zcode" ]]; }
+detect_qwenpaw()      { command -v qwenpaw >/dev/null 2>&1 || [[ -d "${QWENPAW_WORKING_DIR:-${HOME}/.qwenpaw}" ]]; }
 # Hermes 安装根目录（不含 profile）：HERMES_HOME > Windows($LOCALAPPDATA/hermes) > ~/.hermes（issue #82/#102）
 hermes_base_dir() {
   if [[ -n "${HERMES_HOME:-}" ]]; then
@@ -149,6 +153,8 @@ is_detected() {
     hermes)      detect_hermes      ;;
     kiro)        detect_kiro        ;;
     qoder)       detect_qoder       ;;
+    zcode)       detect_zcode       ;;
+    qwenpaw)     detect_qwenpaw     ;;
     *)           return 1 ;;
   esac
 }
@@ -173,6 +179,8 @@ tool_label() {
     hermes)      printf "%-14s  %s" "Hermes Agent" "(~/.hermes/skills)"     ;;
     kiro)        printf "%-14s  %s" "Kiro"         "(~/.kiro/agents)"       ;;
     qoder)       printf "%-14s  %s" "Qoder"        "(.qoder/agents)"        ;;
+    zcode)       printf "%-14s  %s" "ZCode"        "(~/.zcode/agents)"      ;;
+    qwenpaw)     printf "%-14s  %s" "QwenPaw"      "(~/.qwenpaw/skill_pool)" ;;
   esac
 }
 
@@ -527,6 +535,53 @@ install_hermes() {
   fi
 }
 
+# 智谱 ZCode —— subagent 文件 ~/.zcode/agents/<slug>.md
+# 参考：https://zcode.z.ai/en/docs/subagents
+install_zcode() {
+  local src="$INTEGRATIONS/zcode"
+  local dest="${HOME}/.zcode/agents"
+  local count=0
+
+  [[ -d "$src" ]] || { err "integrations/zcode 不存在。请先运行 convert.sh --tool zcode"; return 1; }
+
+  mkdir -p "$dest"
+
+  local f
+  while IFS= read -r -d '' f; do
+    cp "$f" "$dest/"
+    (( count++ )) || true
+  done < <(find "$src" -maxdepth 1 -name "*.md" -print0)
+
+  ok "ZCode: $count 个智能体 -> $dest"
+  warn "提示: 编辑定义文件后需新开会话，运行中的会话不会热重载"
+  warn "提示: 对话框里用 @ 引用子智能体，或让 ZCode 自动选择"
+}
+
+# QwenPaw —— skill 目录 ~/.qwenpaw/skill_pool/<slug>/SKILL.md
+# 参考：https://github.com/agentscope-ai/QwenPaw/blob/main/website/public/docs/skills.zh.md
+install_qwenpaw() {
+  local src="$INTEGRATIONS/qwenpaw"
+  local dest="${QWENPAW_WORKING_DIR:-${HOME}/.qwenpaw}/skill_pool"
+  local count=0
+
+  [[ -d "$src" ]] || { err "integrations/qwenpaw 不存在。请先运行 convert.sh --tool qwenpaw"; return 1; }
+
+  mkdir -p "$dest"
+
+  local d
+  while IFS= read -r -d '' d; do
+    local name; name="$(basename "$d")"
+    [[ -f "$d/SKILL.md" ]] || continue
+    mkdir -p "$dest/$name"
+    cp "$d/SKILL.md" "$dest/$name/SKILL.md"
+    (( count++ )) || true
+  done < <(find "$src" -mindepth 1 -maxdepth 1 -type d -print0)
+
+  ok "QwenPaw: $count 个 skills -> $dest"
+  warn "提示: 手动放入技能池的 skill 默认为「禁用」状态，需在控制台启用后广播到工作区"
+  warn "提示: 若不想复制进主池，可在 config.json 的 skill_paths 里登记 integrations/qwenpaw 作为外部技能根目录"
+}
+
 install_kiro() {
   local src="$INTEGRATIONS/kiro"
   local dest="${HOME}/.kiro/agents"
@@ -588,6 +643,8 @@ install_tool() {
     hermes)      install_hermes      ;;
     kiro)        install_kiro        ;;
     qoder)       install_qoder       ;;
+    zcode)       install_zcode       ;;
+    qwenpaw)     install_qwenpaw     ;;
   esac
 }
 
