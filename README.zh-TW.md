@@ -1,29 +1,30 @@
-# agency-agents 中文版（AI 智能體專家團隊）
+# agency-agents 中文版（AI 智能體專家團隊）繁體中文
 
 🌐 [簡體中文](README.md) | **繁體中文** | [English (upstream)](https://github.com/msitarzewski/agency-agents)
 
-> **277 個即插即用的 AI 專家角色** — 覆蓋公司經營（CEO/CTO/CMO/COO/CPO/CFO）、工程、設計、行銷、產品、遊戲、安全、GIS、金融等 20 個部門。不是通用提示詞範本，每個智能體都有獨立的人設、專業流程和可交付成果。支援 Claude Code / Cursor / Copilot 等 18 種 AI 程式設計工具。
+> **277 個即插即用的 AI 專家角色** — 覆蓋公司經營（CEO/CTO/CMO/COO/CPO/CFO）、工程、設計、營銷、產品、遊戲、安全、GIS、金融等 20 個部門。不是通用提示詞模板，每個智能體都有獨立的人設、專業流程和可交付成果。支援 Claude Code / Cursor / Copilot 等 18 種 AI 程式設計工具。
 
-[agency-agents](https://github.com/msitarzewski/agency-agents) 的中文社群版。在完整翻譯上游的基礎上，新增了 63 個中國市場原創智能體（小紅書、抖音、微信、B站、飛書、釘釘等平台運營，以及跨境電商、政務ToG、醫療合規、Qt 工業上位機、機械設計、畜禽養殖檔案核對等垂直領域）。
+[agency-agents](https://github.com/msitarzewski/agency-agents) 的中文社群版。在完整翻譯上游的基礎上，新增了 63 箇中國市場原創智能體（小紅書、抖音、微信、B站、飛書、釘釘等平臺運營，以及跨境電商、政務ToG、醫療合規、Qt 工業上位機、機械設計、畜禽養殖檔案核對等垂直領域）。
 
-想更好地用起來，或想為團隊打造統一的智能體工作台？[下載桌面客戶端](https://github.com/jnMetaCode/agency-orchestrator/releases/latest)（原生 App，免裝 Node，macOS / Windows / Linux），或線上體驗 [ao.aiolaola.com/experts](https://ao.aiolaola.com/experts)。
+想更好地用起來，或想給團隊打造統一的智能體工作臺？[下載桌面客戶端](https://github.com/jnMetaCode/agency-orchestrator/releases/latest)（原生 App，免裝 Node，macOS / Windows / Linux），或線上體驗 [ao.aiolaola.com/experts](https://ao.aiolaola.com/experts)。
 
 [![GitHub stars](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=social)](https://github.com/jnMetaCode/agency-agents-zh)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
+[![npm](https://img.shields.io/npm/v/agency-agents-zh?color=cb3837&logo=npm)](https://www.npmjs.com/package/agency-agents-zh)
 [![桌面客戶端](https://img.shields.io/badge/桌面客戶端-macOS%20%7C%20Windows%20%7C%20Linux-2563eb?logo=github)](https://github.com/jnMetaCode/agency-orchestrator/releases/latest)
 [![線上體驗](https://img.shields.io/badge/線上體驗-ao.aiolaola.com-8b5cf6)](https://ao.aiolaola.com/experts)
-
-> 📖 **免費配套學習** → [從零學會 AI 編程](https://aiolaola.com/zh-Hant?utm_source=github&utm_campaign=agents-tw)(180 節)＋ [AI 智能體課程](https://aiolaola.com/zh-Hant/course/agents?utm_source=github&utm_campaign=agents-tw)(40 節)— 繁體中文實作課程,免費
 
 
 ### 📊 專案規模
 
-| 🤖 AI 智能體 | 🌏 英文版翻譯 | 🇨🇳 中國市場原創 | 🧭 搜尋增長方法論 | 🧠 支援工具 | 🏢 部門 |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| **277** | **213** | **63** | **1** | **18 種** | **20 個** |
+| 🤖 AI 智能體 | 🌏 英文版翻譯 | 🇨🇳 中國市場原創 | 🧠 支援工具 | 🏢 部門 |
+|:---:|:---:|:---:|:---:|:---:|
+| **277** | **213** | **64** | **18 種** | **20 個** |
 
-> 📖 **免費配套學習** → [從零學會 AI 程式設計](https://aiolaola.com/?utm_source=github&utm_campaign=agents)：180 節免費實操課 + 《AI 程式設計實戰三卷書》線上閱讀 + 實戰社群 · 把這個倉的 216 個角色裝進 Claude Code / Cursor / Codex 後配合方法論更高效 · 永久免費
+> 📖 **官方配套課程** → [AI 專家團隊實戰](https://aiolaola.com/course/ai-agency?utm_source=github&utm_campaign=agents)（33 節，免費）：手把手把這倉 277 位專家用成一支團隊——單兵點名、自動組隊、一人公司全流程，桌面端零程式碼教學。另有 [從零學會 AI 程式設計](https://aiolaola.com/?utm_source=github&utm_campaign=agents)（180 節）＋ [從零構建 AI 智能體](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=agents)（40 節）
+>
+> 🌍 Also available in [English](https://aiolaola.com/en?utm_source=github&utm_campaign=agents) · [日本語](https://aiolaola.com/ja?utm_source=github&utm_campaign=agents) · [Español](https://aiolaola.com/es?utm_source=github&utm_campaign=agents) · [한국어](https://aiolaola.com/ko?utm_source=github&utm_campaign=agents) · [繁體中文](https://aiolaola.com/zh-Hant?utm_source=github&utm_campaign=agents)
 
 ---
 
@@ -31,13 +32,13 @@
 
 <p align="center">
   <a href="https://apinebula.ai/V6ekjG">
-    <img src="assets/sponsor-apinebula.jpeg" alt="APINEBULA — 企業級 AI 聚合平台，聚合 Claude / GPT / Gemini 滿血模型，一個接口接入全球頂尖大模型，價格低至 1 折起" width="100%">
+    <img src="assets/sponsor-apinebula.jpeg" alt="APINEBULA — 企業級 AI 聚合平臺，聚合 Claude / GPT / Gemini 滿血模型，一個介面接入全球頂尖大模型，價格低至 1 折起" width="100%">
   </a>
 </p>
 
-感謝 [APINEBULA](https://apinebula.ai/V6ekjG) 大屏贊助本專案！APINEBULA 是銀河錄像局旗下的企業級 AI 聚合平台，背靠大平台資源，面向開發者、團隊與企業用戶提供穩定、高性價比的大模型 API 接入服務。平台聚合 Claude、GPT、Gemini 等主流滿血模型，一個接口即可接入全球頂尖 AI 大模型，各大模型價格低至 1 折起，支持企業級高併發、正式合同、對公打款與開票服務，適合 AI 編程、Agent 開發、業務系統集成等多種場景！
+感謝 [APINEBULA](https://apinebula.ai/V6ekjG) 大屏贊助本專案！APINEBULA 是銀河錄影局旗下的企業級 AI 聚合平臺，背靠大平臺資源，面向開發者、團隊與企業使用者提供穩定、高性價比的大模型 API 接入服務。平臺聚合 Claude、GPT、Gemini 等主流滿血模型，一個介面接入全球頂尖 AI 大模型，各大模型價格低至 1 折起，支援企業級高併發、正式合同、對公打款與開票服務，適合 AI 程式設計、Agent 開發、業務系統整合等多種場景！
 
-🎁 **點擊[此連結](https://apinebula.ai/V6ekjG)註冊並在充值時填寫「agent」優惠碼，即可享九折優惠！**
+🎁 **透過[此連結](https://apinebula.ai/V6ekjG)註冊並在充值時填寫 "agent" 優惠碼可享九折優惠！**
 
 <hr>
 
@@ -50,7 +51,7 @@
 </td>
 <td width="75%" valign="middle">
 
-感謝 [AICodeMirror](https://www.aicodemirror.ai/register?invitecode=XO5L7R) 贊助了本專案！AICodeMirror 提供 Claude / Codex / Gemini 官方高穩定中轉服務，支持企業級高併發、極速開票、7×24 專屬技術支持。Codex 官方渠道低至 0.7 折，儲值更有折上折！🎁 **AICodeMirror 為 agency-agents-zh 專案的用戶提供了特別福利，通過[此連結](https://www.aicodemirror.ai/register?invitecode=XO5L7R)註冊的用戶，可享受首儲 8 折！**
+感謝 [AICodeMirror](https://www.aicodemirror.ai/register?invitecode=XO5L7R) 贊助了本專案！AICodeMirror 提供 Claude / Codex / Gemini 官方高穩定中轉服務，支援企業級高併發、極速開票、7×24 專屬技術支援。Codex 官方渠道低至 0.7 折，充值更有折上折！🎁 **AICodeMirror 為 agency-agents-zh 專案的使用者提供了特別福利，透過[此連結](https://www.aicodemirror.ai/register?invitecode=XO5L7R)註冊的使用者，可享受首充 8 折！**
 
 </td>
 </tr>
@@ -60,12 +61,12 @@
 <tr>
 <td width="25%">
   <a href="https://cubence.com/signup?code=SCW29JP9">
-    <img src="assets/sponsor-cubence.jpeg" alt="Cubence — 專業 AI API 閘道，穩定高效的 API 中轉服務，支持 Claude Code、Codex、Gemini 等多種模型" width="100%">
+    <img src="assets/sponsor-cubence.jpeg" alt="Cubence — 專業 AI API 閘道器，穩定高效的 API 中轉服務，支援 Claude Code、Codex、Gemini 等多種模型" width="100%">
   </a>
 </td>
 <td width="75%" valign="middle">
 
-感謝 [Cubence](https://cubence.com/signup?code=SCW29JP9) 對本專案的支持。Cubence 是一家致力為客戶提供穩定、高效的 API 中轉服務商。從 25 年 9 月營運至今，提供了 Claude Code、Codex、Gemini 等多種模型支持。🎁 **通過[此連結](https://cubence.com/signup?code=SCW29JP9)註冊的用戶，首次購買時填寫專屬優惠碼 `AGENCY` 即可享受 9 折優惠！**
+感謝 [Cubence](https://cubence.com/signup?code=SCW29JP9) 對本專案的支援。Cubence 是一家致力為客戶提供穩定、高效的 API 中轉服務商。從 25 年 9 月運營至今，提供了 Claude Code、Codex、Gemini 等多種模型支援。🎁 **透過[此連結](https://cubence.com/signup?code=SCW29JP9)註冊的使用者，首次購買時填寫專屬優惠碼 `AGENCY` 即可享受 9 折優惠！**
 
 </td>
 </tr>
@@ -80,7 +81,7 @@
 </td>
 <td width="75%" valign="middle">
 
-感謝 [字節火山引擎](https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh) 贊助了本專案！火山方舟 Agent/Coding Plan 國模套餐首購 9.9 元起，支援 GLM-5.3、Kimi-K3、DeepSeek、MiniMax、豆包等主流模型，統一 API，適配編碼與智能體開發。
+感謝 [位元組火山引擎](https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh) 贊助了本專案！火山方舟 Agent/Coding Plan 國模套餐首購 9.9 元起，支援 GLM-5.3、Kimi-K3、DeepSeek、MiniMax、豆包等主流模型，統一 API，適配編碼與智能體開發。
 🎁 **註冊即免費領 2500 萬 Token，[立即前往火山引擎活動頁面](https://www.volcengine.com/activity/ai618?utm_campaign=hw&utm_content=hw&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=agency-agents-zh)。**
 
 </td>
@@ -91,12 +92,12 @@
 <tr>
 <td width="25%">
   <a href="https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents">
-    <img src="assets/sponsor-compshare.jpeg" alt="優雲智算 — 熱門國產模型按次調用套餐包，低至 49 元/月起" width="100%">
+    <img src="assets/sponsor-compshare.jpeg" alt="優雲智算 — 熱門國產模型按次呼叫套餐包，低至 49 元/月起" width="100%">
   </a>
 </td>
 <td width="75%" valign="middle">
 
-感謝[優雲智算](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)贊助了本專案！優雲智算是 UCloud 旗下 AI 雲平台，主打包月、按次的高性價比國模 Agent Plan 套餐，低至 49 元/月起。同時提供官轉穩定海外模型。支持接入 Claude Code、Codex 及 API 調用。支持企業高併發、7*24 技術支持、自助開票。🎁 **通過[此連結](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)註冊的用戶，可得免費 5 元平台體驗金！**
+感謝[優雲智算](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)贊助了本專案！優雲智算是UCloud旗下AI雲平臺，主打包月、按次的高性價比國模Agent Plan套餐，支援GLM5.2 低至49元/月起。同時提供官轉穩定海外模型。支援接入 Claude Code、Codex 及 API 呼叫。支援企業高併發、7*24技術支援、自助開票。🎁 **透過[此連結](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)註冊的使用者，可得免費5元平臺體驗金！**
 
 </td>
 </tr>
@@ -111,7 +112,7 @@
 </td>
 <td width="75%" valign="middle">
 
-感謝 [LanoX AI](https://lanox.ai/?c=X3RD38F7&inviteCode=A3HRUB6M) 贊助了本專案！LanoX AI 為開發者、團隊與企業提供穩定、高性價比的全球模型接入服務，涵蓋 GPT、Claude、Gemini、Qwen、Grok 等主流模型，以及 Seedance 2.0、GPT Image、Gemini Nano Banana 等多模態創作能力。高可用、原生能力輸出、不降智、不混模、調用與計費透明，頂級模型低至官方價 1 折起，文檔清晰、接入簡單，支援開票與企業批量調用，適用於 AI 產品、Agent、內容平台與研發團隊。🎁 **通過[此連結](https://lanox.ai/?c=X3RD38F7&inviteCode=A3HRUB6M)註冊的用戶，可獲贈 5 美金體驗額度與百萬免費 Token，另有 500+ 免費模型可用！**
+感謝 [LanoX AI](https://lanox.ai/?c=X3RD38F7&inviteCode=A3HRUB6M) 贊助了本專案！LanoX AI 為開發者、團隊與企業提供穩定、高性價比的全球模型接入服務，覆蓋 GPT、Claude、Gemini、Qwen、Grok 等主流模型，以及 Seedance 2.0、GPT Image、Gemini Nano Banana 等多模態創作能力。高可用、原生能力輸出、不降智、不混模、呼叫與計費透明，頂級模型低至官方價 1 折起，文件清晰、接入簡單，支援開票與企業批次呼叫，適用於 AI 產品、Agent、內容平臺與研發團隊。🎁 **透過[此連結](https://lanox.ai/?c=X3RD38F7&inviteCode=A3HRUB6M)註冊的使用者，可獲贈 5 美金體驗額度與百萬免費 Token，另有 500+ 免費模型可用！**
 
 </td>
 </tr>
@@ -121,12 +122,12 @@
 <tr>
 <td width="25%">
   <a href="https://www.shengsuanyun.com/?from=CH_QKH696UI">
-    <img src="assets/sponsor-shengsuanyun.jpeg" alt="勝算雲 — 面向 AI 原生團隊的模型 API 聚合平台，匯集 Claude / ChatGPT / Gemini 等海內外大模型，提供企業級定制網關" width="100%">
+    <img src="assets/sponsor-shengsuanyun.jpeg" alt="勝算雲 — 面向 AI 原生團隊的模型 API 聚合平臺，彙集 Claude / ChatGPT / Gemini 等海內外大模型，提供企業級定製閘道器" width="100%">
   </a>
 </td>
 <td width="75%" valign="middle">
 
-感謝[勝算雲](https://www.shengsuanyun.com/?from=CH_QKH696UI)對本專案的贊助！勝算雲是面向 AI 原生團隊的模型 API 聚合平台，匯集 Claude、ChatGPT、Gemini 等海內外大語言模型及多媒體模型，支援統一接入與按量調用。平台堅持合規 API 服務，杜絕逆向工程與資源稀釋。此外平台提供企業級定制網關，包括團隊成本與權限管理、智能路由、安全防護及 BYOK 金鑰託管，並提供發票服務。🎁 **新用戶通過[此連結](https://www.shengsuanyun.com/?from=CH_QKH696UI)註冊，即可領取 5 元 Token 體驗額度！**
+感謝[勝算雲](https://www.shengsuanyun.com/?from=CH_QKH696UI)對本專案的贊助！勝算雲是面向 AI 原生團隊的模型 API 聚合平臺，彙集 Claude、ChatGPT、Gemini 等海內外大語言模型及多媒體模型，支援統一接入與按量呼叫。平臺堅持合規 API 服務，杜絕逆向工程和資源稀釋。此外平臺提供企業級定製閘道器，包括團隊成本與許可權管理、智慧路由、安全防護及 BYOK 金鑰託管，並提供發票服務。🎁 **新使用者透過[此連結](https://www.shengsuanyun.com/?from=CH_QKH696UI)註冊，即可領取 5 元 Token 體驗額度！**
 
 </td>
 </tr>
@@ -136,12 +137,12 @@
 <tr>
 <td width="25%">
   <a href="https://go.apimart.ai/gh-agency-agents-zh">
-    <img src="assets/sponsor-apimart.jpeg" alt="APIMart — 專注 AI 圖片/影片生成的低價 API 平台，GPT-Image-2 低至 $0.006/張，圖片與影片共用一套非同步 API" width="100%">
+    <img src="assets/sponsor-apimart.jpeg" alt="APIMart — 專注 AI 圖片/影片生成的低價 API 平臺，GPT-Image-2 低至 $0.006/張，圖片與影片共用一套非同步 API" width="100%">
   </a>
 </td>
 <td width="75%" valign="middle">
 
-感謝 [APIMart](https://go.apimart.ai/gh-agency-agents-zh) 贊助了本專案！APIMart 是專注 AI 圖片/影片生成的低價 API 平台，GPT-Image-2 低至 $0.006/張，1 美元可出圖 160+ 張。圖片、影片共用一套非同步 API，提交任務拿 ID、輪詢或回調取結果，跑批萬張不逾時、換模型不改程式碼。按量付費、無月費。🎁 **通過[此連結](https://go.apimart.ai/gh-agency-agents-zh)註冊即可開用！**
+感謝 [APIMart](https://go.apimart.ai/gh-agency-agents-zh) 贊助了本專案！APIMart 是專注 AI 圖片/影片生成的低價 API 平臺，GPT-Image-2 低至 $0.006/張，1 美元可出圖 160+ 張。圖片、影片共用一套非同步 API，提交任務拿 ID、輪詢或回撥取結果，跑批萬張不超時、換模型不改程式碼。按量付費、無月費。🎁 **透過[此連結](https://go.apimart.ai/gh-agency-agents-zh)註冊即可開用！**
 
 </td>
 </tr>
@@ -156,7 +157,7 @@
 </td>
 <td width="75%" valign="middle">
 
-感謝[秘塔科技](https://metaso.cn/minimax-h3/?s=gt533367)贊助了本專案！秘塔科技提供高性價比的 MiniMax H3 影片生成 API 服務，適合漫劇、行銷影片及批量影片生成：768P 低至 0.09 元/秒、2K 0.15 元/秒，原生 2K 畫質，支援音畫同步。API 相容 OpenAI 協議，支援 ComfyUI，無需自行部署模型與 GPU，開箱即用。🎁 **通過[此連結](https://metaso.cn/minimax-h3/?s=gt533367)註冊，即可享有贈送額度及專屬優惠！**
+感謝[秘塔科技](https://metaso.cn/minimax-h3/?s=gt533367)贊助了本專案！秘塔科技提供高性價比的 MiniMax H3 影片生成 API 服務，適合漫劇、營銷影片及批次影片生成：768P 低至 0.09 元/秒、2K 0.15 元/秒，原生 2K 畫質，支援音畫同步。API 相容 OpenAI 協議，支援 ComfyUI，無需自行部署模型和 GPU，開箱即用。🎁 **透過[此連結](https://metaso.cn/minimax-h3/?s=gt533367)註冊，即可享受贈送額度及專屬優惠！**
 
 </td>
 </tr>
@@ -175,13 +176,13 @@ ao compose "幫我寫一篇關於 AI Agent 的深度分析文章" --run
 
 **不想用命令列？** [**下載桌面客戶端**](https://github.com/jnMetaCode/agency-orchestrator/releases/latest)（原生 App，免裝 Node，macOS / Windows / Linux），或線上體驗 [ao.aiolaola.com/experts](https://ao.aiolaola.com/experts)。
 
-零程式碼編排 · DAG 並行 · 斷點續跑 · 10 種大模型（7 種免 key）· 現成模板開箱即用 —— [**了解 Agency Orchestrator →**](https://github.com/jnMetaCode/agency-orchestrator)
+零程式碼編排 · DAG 並行 · 斷點續跑 · 10 種大模型（7 種免 key）· 現成模板開箱即用 —— [**瞭解 Agency Orchestrator →**](https://github.com/jnMetaCode/agency-orchestrator)
 
 ---
 
 ## 🖼️ 線上瀏覽全部專家（無需安裝）
 
-搜尋 / 按部門篩選 / 查看與**複製每位專家的完整提示詞** —— 全部 277 位，直接在瀏覽器裡看：
+搜尋 / 按部門篩選 / 檢視與**複製每位專家的完整提示詞** —— 全部 268 位，直接在瀏覽器裡看：
 
 <p align="center">
   <a href="https://ao.aiolaola.com/experts">
@@ -195,6 +196,8 @@ ao compose "幫我寫一篇關於 AI Agent 的深度分析文章" --run
 ## 這是什麼？
 
 一套**開箱即用的 AI 角色庫**。每個智能體都有明確的身份定義、關鍵規則、工作流程和交付物，安裝到你的 AI 程式設計工具後用自然語言啟用。
+
+**和普通提示詞的區別**：普通提示詞告訴 AI "你是一個專家"；這裡的智能體定義了專家**怎麼思考、怎麼做事、交付什麼**。例如[安全工程師](engineering/engineering-security-engineer.md)會按 OWASP Top 10 逐項審查程式碼，[小紅書運營專家](marketing/marketing-xiaohongshu-operator.md)會輸出完整的種草筆記策略和達人合作方案。
 
 ---
 
@@ -267,14 +270,14 @@ cp -r marketing/*.md ~/.claude/agents/
 | 智能體 | 專長 | 適用場景 |
 |--------|------|----------|
 | [執行長 CEO](company/chief-executive-officer.md) ⭐ | 戰略方向、資源配置、組織節奏、對外敘事 | 定方向、做重大取捨、把願景翻成優先順序 |
-| [技術長 CTO](company/chief-technology-officer.md) ⭐ | 技術路線、架構決策、研發組織、技術債 | 選型評審、技術債取捨、研發效能 |
-| [產品長 CPO](company/chief-product-officer.md) ⭐ | 產品戰略、路線圖取捨、產品組織 | 需求裁決、路線圖排期、產品覆盤 |
-| [行銷長 CMO](company/chief-marketing-officer.md) ⭐ | 定位、渠道組合、營銷預算、品牌資產 | 增長打法、預算分配、品牌建設 |
+| [首席技術官 CTO](company/chief-technology-officer.md) ⭐ | 技術路線、架構決策、研發組織、技術債 | 選型評審、技術債取捨、研發效能 |
+| [首席產品官 CPO](company/chief-product-officer.md) ⭐ | 產品戰略、路線圖取捨、產品組織 | 需求裁決、路線圖排期、產品覆盤 |
+| [首席營銷官 CMO](company/chief-marketing-officer.md) ⭐ | 定位、渠道組合、營銷預算、品牌資產 | 增長打法、預算分配、品牌建設 |
 | [營運長 COO](company/chief-operating-officer.md) ⭐ | 流程、指標、執行節奏 | 把戰略落成 SOP、消滅組織摩擦 |
-| [財務長 CFO](company/chief-financial-officer.md) | 資本配置、資金運營、財務規劃、投資者關係 | 融資、預算、董事會彙報 |
+| [首席財務官 CFO](company/chief-financial-officer.md) | 資本配置、資金運營、財務規劃、投資者關係 | 融資、預算、董事會彙報 |
 | [幕僚長](company/chief-of-staff.md) | 戰略運營、跨部門協調、OKR 追蹤 | 高管例會、組織變革推進 |
 
-> 想開一次「高管例會」？把這幾位放進同一個工作流，讓他們分別從戰略/技術/產品/增長/運營/財務視角過同一個議題——這正是 [Agency Orchestrator](https://github.com/jnMetaCode/agency-orchestrator) 的用法。
+> 想開一次"高管例會"？把這幾位放進同一個工作流，讓他們分別從戰略/技術/產品/增長/運營/財務視角過同一個議題——這正是 [Agency Orchestrator](https://github.com/jnMetaCode/agency-orchestrator) 的用法。
 
 ### 🛠️ 工程部
 
@@ -285,7 +288,7 @@ cp -r marketing/*.md ~/.claude/agents/
 | [前端開發者](engineering/engineering-frontend-developer.md) | React/Vue、UI 實現、效能最佳化 | 現代 Web 應用、畫素級 UI |
 | [後端架構師](engineering/engineering-backend-architect.md) | API 設計、資料庫架構、可擴充套件性 | 服務端系統、微服務 |
 | [AI 工程師](engineering/engineering-ai-engineer.md) | 機器學習、模型部署、AI 整合 | ML 功能、資料管線 |
-| [DevOps 自動化](engineering/engineering-devops-automator.md) | CI/CD、基礎設施自動化 | 流水線開發、部署自動化 |
+| [DevOps 自動化師](engineering/engineering-devops-automator.md) | CI/CD、基礎設施自動化 | 流水線開發、部署自動化 |
 | [安全工程師](engineering/engineering-security-engineer.md) | 威脅建模、程式碼審計、安全架構 | 應用安全、漏洞評估 |
 | [快速原型師](engineering/engineering-rapid-prototyper.md) | 快速 POC、MVP 開發 | 概念驗證、駭客馬拉松 |
 | [高階開發者](engineering/engineering-senior-developer.md) | Laravel/Livewire/FluxUI、高階 CSS、Three.js | 高品質 Web 體驗 |
@@ -294,9 +297,12 @@ cp -r marketing/*.md ~/.claude/agents/
 | [技術文件工程師](engineering/engineering-technical-writer.md) | API 文件、開發者文件、docs-as-code | 技術文件、知識庫 |
 | [自主最佳化架構師](engineering/engineering-autonomous-optimization-architect.md) | 自適應系統、自動調優 | 智慧運維、自愈系統 |
 | [嵌入式韌體工程師](engineering/engineering-embedded-firmware-engineer.md) | RTOS、外設驅動、低功耗設計 | IoT、嵌入式系統 |
+| [上位機工程師](engineering/engineering-pc-host-engineer.md) ⭐ | Qt/QML、QSerialPort、Modbus/CAN、QChart 即時視覺化 | 工業上位機、檢測裝置、HMI |
+| [機械設計工程師](engineering/engineering-mechanical-design-engineer.md) ⭐ | 傳動選型、強度剛度疲勞振動校核、DFMA、GB/ISO 標準件 | 工業裝備、自動化產線、檢測儀器 |
 | [嵌入式 Linux 驅動工程師](engineering/engineering-embedded-linux-driver-engineer.md) ⭐ | 核心模組、裝置樹、Platform/I2C/SPI 驅動 | 嵌入式 Linux BSP 開發 |
-| [FPGA/ASIC 數位設計工程師](engineering/engineering-fpga-digital-design-engineer.md) ⭐ | Verilog/SystemVerilog、時序收斂、AXI 匯流排 | FPGA 開發、數位邏輯設計 |
-| [IoT 方案架構師](engineering/engineering-iot-solution-architect.md) ⭐ | MQTT/CoAP、邊緣運算、裝置管理、雲平臺 | 物聯網端到端方案設計 |
+| [FPGA/ASIC 數字設計工程師](engineering/engineering-fpga-digital-design-engineer.md) ⭐ | Verilog/SystemVerilog、時序收斂、AXI 匯流排 | FPGA 開發、數字邏輯設計 |
+| [IoT 方案架構師](engineering/engineering-iot-solution-architect.md) ⭐ | MQTT/CoAP、邊緣計算、裝置管理、雲平臺 | 物聯網端到端方案設計 |
+| [國內網路工程師](engineering/engineering-network-engineer-china.md) ⭐ | 華為 VRP/華三 Comware/銳捷、VLAN/OSPF/BGP/VXLAN、信創國產化、等保組網 | 國產裝置園區網/資料中心/廣域網 |
 | [故障響應指揮官](engineering/engineering-incident-response-commander.md) | 故障處置、SLO 管理、事後覆盤 | 線上故障、應急響應 |
 | [威脅檢測工程師](engineering/engineering-threat-detection-engineer.md) | SIEM、威脅狩獵、檢測規則 | 安全運營、威脅檢測 |
 | [Solidity 智慧合約工程師](engineering/engineering-solidity-smart-contract-engineer.md) | Solidity、EVM、Gas 最佳化、DeFi | 智慧合約開發、Web3 |
@@ -305,12 +311,13 @@ cp -r marketing/*.md ~/.claude/agents/
 | [資料庫最佳化師](engineering/engineering-database-optimizer.md) | Schema 設計、查詢最佳化、索引策略 | 資料庫效能調優 |
 | [Git 工作流大師](engineering/engineering-git-workflow-master.md) | 分支策略、約定式提交、變基 | Git 工作流規範 |
 | [軟體架構師](engineering/engineering-software-architect.md) | 系統設計、DDD、架構決策 | 系統架構設計 |
-| [SRE](engineering/engineering-sre.md) | SLO、可觀測性、混沌工程 | 站點可靠性工程 |
+| [SRE (站點可靠性工程師)](engineering/engineering-sre.md) | SLO、可觀測性、混沌工程 | 站點可靠性工程 |
 | [AI 資料修復工程師](engineering/engineering-ai-data-remediation-engineer.md) | 自愈管道、SLM 語義聚類、零資料丟失 | 大規模資料異常修復 |
 | [飛書整合開發工程師](engineering/engineering-feishu-integration-developer.md) ⭐ | 飛書機器人、審批流、多維表格 | 飛書生態整合開發 |
 | [釘釘整合開發工程師](engineering/engineering-dingtalk-integration-developer.md) ⭐ | 釘釘機器人、酷應用、聯結器 | 釘釘生態整合開發 |
-| [上位機工程師](engineering/engineering-pc-host-engineer.md) ⭐ | Qt/QML、QSerialPort、Modbus/CAN、QChart 即時可視化 | 工業上位機、檢測設備、HMI |
-| [機械設計工程師](engineering/engineering-mechanical-design-engineer.md) ⭐ | 傳動選型、強度剛度疲勞振動校核、DFMA、GB/ISO 標準件 | 工業裝備、自動化產線、檢測儀器 |
+| [CMS 開發者](engineering/engineering-cms-developer.md) | Drupal/WordPress、主題開發、自定義外掛 | CMS 站點開發與內容架構 |
+| [郵件智慧工程師](engineering/engineering-email-intelligence-engineer.md) | 郵件解析、結構化提取、AI 推理資料 | 智能體郵件整合 |
+| [Filament 最佳化專家](engineering/engineering-filament-optimization-specialist.md) | Filament PHP 後臺重構、高影響力改造 | PHP 後臺管理最佳化 |
 
 ### 🎨 設計部
 
@@ -323,6 +330,7 @@ cp -r marketing/*.md ~/.claude/agents/
 | [UX 架構師](design/design-ux-architect.md) | 資訊架構、互動設計、導航系統 | 複雜產品的 UX 架構 |
 | [品牌守護者](design/design-brand-guardian.md) | 品牌標識、一致性、定位 | 品牌策略、視覺規範 |
 | [影像提示詞工程師](design/design-image-prompt-engineer.md) | AI 影像生成、提示詞最佳化 | Midjourney/DALL-E 出圖 |
+| [影片提示詞工程師](design/design-video-prompt-engineer.md) ⭐ | 文生影片提示詞、5 段式結構、運鏡與負面詞 | Sora / 可靈 / Veo / Seedance 出片 |
 | [視覺敘事師](design/design-visual-storyteller.md) | 資料視覺化、視覺敘事 | 資訊圖、簡報 |
 | [趣味注入師](design/design-whimsy-injector.md) | 微互動、彩蛋、趣味元素 | 產品細節體驗提升 |
 | [包容性視覺專家](design/design-inclusive-visuals-specialist.md) | 多元化視覺、無障礙設計 | 包容性設計、全球化視覺 |
@@ -335,12 +343,12 @@ cp -r marketing/*.md ~/.claude/agents/
 
 | 智能體 | 專長 | 適用場景 |
 |--------|------|----------|
-| [小紅書運營](marketing/marketing-xiaohongshu-operator.md) ⭐ | 種草筆記、達人合作、爆款內容 | 小紅書獲客、品牌種草 |
+| [小紅書運營專家](marketing/marketing-xiaohongshu-operator.md) ⭐ | 種草筆記、達人合作、爆款內容 | 小紅書獲客、品牌種草 |
 | [抖音策略師](marketing/marketing-douyin-strategist.md) ⭐ | 短影片策劃、演算法最佳化、直播帶貨 | 抖音增長、短影片營銷 |
 | [微信公眾號運營](marketing/marketing-wechat-operator.md) ⭐ | 公眾號內容、社群運營、裂變增長 | 微信生態營銷 |
 | [B站內容策略師](marketing/marketing-bilibili-strategist.md) ⭐ | UP主運營、彈幕文化、中長影片 | B站內容增長、品牌合作 |
 | [快手策略師](marketing/marketing-kuaishou-strategist.md) ⭐ | 下沉市場、老鐵文化、直播電商 | 快手運營、社群信任 |
-| [中國電商運營師](marketing/marketing-china-ecommerce-operator.md) | 淘寶/拼多多/京東、廣告投放、大促作戰 | 電商全鏈路深度運營 |
+| [中國電商運營專家](marketing/marketing-china-ecommerce-operator.md) | 淘寶/拼多多/京東、廣告投放、大促作戰 | 電商全鏈路深度運營 |
 | [電商運營師](marketing/marketing-ecommerce-operator.md) ⭐ | 淘寶/拼多多/京東、直播帶貨、大促 | 電商全平臺運營（簡潔版） |
 | [百度 SEO 專家](marketing/marketing-baidu-seo-specialist.md) ⭐ | 百度最佳化、百科/知道/貼吧生態 | 百度搜索營銷 |
 | [私域流量運營師](marketing/marketing-private-domain-operator.md) ⭐ | 企微SCRM、社群運營、使用者生命週期 | 私域體系搭建、復購增長 |
@@ -354,7 +362,8 @@ cp -r marketing/*.md ~/.claude/agents/
 | [小紅書專家](marketing/marketing-xiaohongshu-specialist.md) | 生活方式內容、趨勢策略 | 小紅書品牌建設 |
 | [微信公眾號管理](marketing/marketing-wechat-official-account.md) | 訂閱者運營、內容營銷 | 微信公眾號增長 |
 | [知乎策略師](marketing/marketing-zhihu-strategist.md) | 知識型內容、思想領袖建設 | 知乎品牌權威 |
-| [新聞情報官](marketing/marketing-daily-news-briefing.md) ⭐ | 國內外多源新聞採集、交叉驗證、結構化簡報 | 內容生產線上游素材供應 |
+| [中國市場本地化策略師](marketing/marketing-china-market-localization-strategist.md) ⭐ | 抖音/小紅書/微信/B站全棧本地化 | 中國市場進入策略 |
+| [新聞情報官](marketing/marketing-daily-news-briefing.md) ⭐ | 國內外多源新聞採集、交叉驗證、結構化簡報 | 內容生產線上遊素材供應 |
 
 > ⭐ 標記的是本專案原創，更貼合國內實操。其餘為上游英文版翻譯。
 
@@ -367,6 +376,7 @@ cp -r marketing/*.md ~/.claude/agents/
 | [Instagram 策展師](marketing/marketing-instagram-curator.md) | 視覺敘事、社群運營 | 出海視覺營銷 |
 | [Reddit 社群運營](marketing/marketing-reddit-community-builder.md) | 社群文化、真實互動 | 出海社群營銷 |
 | [應用商店最佳化師](marketing/marketing-app-store-optimizer.md) | ASO、轉化最佳化 | App 出海推廣 |
+| [影片最佳化專家](marketing/marketing-video-optimization-specialist.md) | YouTube 演算法、觀眾留存、跨平臺分發 | 影片營銷與 SEO |
 
 **通用：**
 
@@ -375,14 +385,14 @@ cp -r marketing/*.md ~/.claude/agents/
 | [增長駭客](marketing/marketing-growth-hacker.md) | 快速獲客、病毒迴圈、實驗 | 使用者增長、轉化最佳化 |
 | [內容創作者](marketing/marketing-content-creator.md) | 多平臺內容、編輯日曆 | 內容策略、品牌故事 |
 | [社交媒體策略師](marketing/marketing-social-media-strategist.md) | 跨平臺策略、整合營銷 | 全渠道社交運營 |
-| [AEO 基礎架構師](marketing/marketing-aeo-foundations.md) | 爬蟲存取、索引、渲染與內容可存取性 | SEO、GEO 與瀏覽型 Agent 的技術地基 |
-| [SEO 與自然搜尋增長專家](marketing/marketing-seo-specialist.md) | 搜尋需求與意圖、技術 SEO、內容架構與歸因 | 自然搜尋增長與轉化 |
-| [AI 搜尋可見性與 GEO 策略師](marketing/marketing-ai-citation-strategist.md) | 提示詞審計、品牌提及與推薦、引用來源 | AI 搜尋可見性與流量歸因 |
-| [智能體任務完成最佳化師](marketing/marketing-agentic-search-optimizer.md) | 任務可發現性、工具選擇、安全執行與後置條件 | 預約、購買、註冊等任務完成 |
-| [搜尋增長編排器](marketing/marketing-search-growth-orchestrator.md) | 路由四個專業 Agent，統一證據、優先級與路線圖 | 跨層搜尋增長規劃 |
+| [SEO 與自然搜尋增長專家](marketing/marketing-seo-specialist.md) | 技術 SEO、搜尋意圖、內容架構、收入歸因 | Google 自然搜尋增長 |
 | [輪播圖增長引擎](marketing/marketing-carousel-growth-engine.md) | 輪播圖內容、自動化投放 | 社交媒體輪播素材 |
 | [LinkedIn 內容創作專家](marketing/marketing-linkedin-content-creator.md) | LinkedIn 職場內容、B2B 獲客 | LinkedIn 品牌建設 |
 | [圖書聯合作者](marketing/marketing-book-co-author.md) | 思想領袖力圖書、代筆協作 | 圖書策劃與撰寫 |
+| [AI 搜尋可見性與 GEO 策略師](marketing/marketing-ai-citation-strategist.md) | AEO/GEO 最佳化、AI 平臺可見性審計 | AI 搜尋引擎品牌可見性 |
+| [搜尋增長編排器](marketing/marketing-search-growth-orchestrator.md) ⭐ | AEO/SEO/GEO/Agentic 四層路由與統一路線圖 | 搜尋增長專案總協調 |
+
+> 🔍 搞不清 SEO / GEO / AEO / Agentic Search 該找誰？看 [Search Growth Stack](SEARCH-GROWTH-STACK.md) —— 五個搜尋相關角色的職責邊界與選人指南。
 
 ### 💰 付費媒體部
 
@@ -521,7 +531,6 @@ cp -r marketing/*.md ~/.claude/agents/
 | [報告分發師](specialized/report-distribution-agent.md) | 報告分發、多渠道推送 | 自動化報告分發 |
 | [銷售資料提取師](specialized/sales-data-extraction-agent.md) | 銷售資料採集、結構化 | CRM 資料處理 |
 | [合規審計師](security/security-compliance-auditor.md) | SOC 2/ISO 27001/HIPAA 合規 | 合規審計、安全認證 |
-| [養殖檔案核對員](specialized/livestock-archive-auditor.md) ⭐ | 養殖檔案、生產日報、批號 FIFO | 畜禽臺帳錯填漏填核對 |
 | [應付賬款智能體](specialized/accounts-payable-agent.md) | 發票處理、付款自動化 | 財務流程自動化 |
 | [身份圖譜操作員](specialized/identity-graph-operator.md) | 身份解析、多源匹配 | 使用者身份治理 |
 | [文化智慧策略師](specialized/specialized-cultural-intelligence-strategist.md) | 文化洞察、跨文化設計 | 全球化產品、本地化策略 |
@@ -543,6 +552,11 @@ cp -r marketing/*.md ~/.claude/agents/
 | [AI 治理政策專家](specialized/specialized-ai-policy-writer.md) ⭐ | 演算法備案、生成式AI管理、倫理審查 | AI 合規與治理框架 |
 | [企業風險評估師](specialized/specialized-risk-assessor.md) ⭐ | COSO本土化、國企風控、ESG | 企業風險管理與審計 |
 | [會議效率專家](specialized/specialized-meeting-assistant.md) ⭐ | 飛書/釘釘/騰訊會議、OKR週會 | 會議管理與紀要輸出 |
+| [土木工程師](specialized/specialized-civil-engineer.md) | Eurocode/DIN/ACI/GB 多標準結構分析 | 土木與結構工程設計 |
+| [法國諮詢市場專家](specialized/specialized-french-consulting-market.md) | ESN/SI 生態、Malt 平臺、薪資代管 | 法國自由職業市場導航 |
+| [韓國商務專家](specialized/specialized-korean-business-navigator.md) | 품의流程、KakaoTalk 禮儀、層級關係 | 韓國商務文化導航 |
+| [招聘專家](specialized/recruitment-specialist.md) ⭐ | 國內招聘平臺、人才評估、勞動法合規 | 招聘運營與僱主品牌 |
+| [技術翻譯專家](specialized/technical-translator-agent.md) | 中英文雙向翻譯、程式設計/AI/雲計算術語 | 技術文件翻譯 |
 
 ### 🥽 空間計算部
 
@@ -661,10 +675,11 @@ cp -r marketing/*.md ~/.claude/agents/
 | **Aider** | `CONVENTIONS.md` | 專案級，需轉換 |
 | **Windsurf** | `.windsurfrules` | 專案級，需轉換 |
 | **Codex CLI** | `.codex/agents/` | 專案級，需轉換 |
-| **WorkBuddy** (騰訊) | `~/.workbuddy/skills/` | 全局，需轉換 |
-| **Hermes Agent** (NousResearch) | `~/.hermes/skills/` | 全局，需轉換 |
-| **DeerFlow 2.0** (位元組跳動) | `skills/custom/` | 專案級，需轉換 |
-| **Qoder** | `~/.qoder/agents/` 或 `.qoder/agents/` | 全域/專案級，需轉換 |
+| **WorkBuddy** (騰訊) | `~/.workbuddy/skills/` | 全域性，需轉換 |
+| **CodeWhale** (原 DeepSeek-TUI) | `~/.codewhale/skills/` | 全域性，需轉換 |
+| **Hermes Agent** (NousResearch) | `~/.hermes/skills/` | 全域性，需轉換 |
+| **DeerFlow 2.0** (字節跳動) | `skills/custom/` | 專案級，需轉換 |
+| **Qoder** | `~/.qoder/agents/` 或 `.qoder/agents/` | 全域性/專案級，需轉換 |
 
 ### 使用方法
 
@@ -776,7 +791,7 @@ cd /your/project
 
 每個智能體會變成一個 `.mdc` 規則檔案，安裝到專案目錄 `.cursor/rules/`。
 
-Cursor 使用 **「智慧匹配」模式**（`alwaysApply: false`）：AI 根據每個規則的 `description` 欄位自動判斷是否相關，相關時自動引用完整內容。
+Cursor 使用 **"智慧匹配"模式**（`alwaysApply: false`）：AI 根據每個規則的 `description` 欄位自動判斷是否相關，相關時自動引用完整內容。
 
 **安裝：**
 ```bash
@@ -816,7 +831,7 @@ cp integrations/cursor/rules/engineering-code-reviewer.mdc /your/project/.cursor
 3. 也可以在 **Cursor Settings**（`Cmd+,`）→ **Rules** → **Project Rules** 中檢視所有規則
 4. 還可以在 Chat 中用 `@規則名` 手動指定引用某個智能體
 
-> **排查**：如果看不到規則，確認 `.cursor/rules/` 在專案根目錄、檔案副檔名是 `.mdc`、已重新開啟專案。
+> **排查**：如果看不到規則，確認 `.cursor/rules/` 在專案根目錄、副檔名是 `.mdc`、已重新開啟專案。
 </details>
 
 <details>
@@ -830,7 +845,7 @@ cd /your/project
 /path/to/agency-agents-zh/scripts/install.sh --tool trae
 ```
 
-**⚠️ 關於「裝了但幾乎不自動觸發」**（見 [issue #59](https://github.com/jnMetaCode/agency-agents-zh/issues/59)）：
+**⚠️ 關於"裝了但幾乎不自動觸發"**（見 [issue #59](https://github.com/jnMetaCode/agency-agents-zh/issues/59)）：
 
 轉換出的 rule 預設 `alwaysApply: false` + 空 `globs:`，屬於 "agent-requested rule"——Trae 模型讀 description 自行決定是否載入。**全裝 268 條 rule 會讓 description 互相稀釋、幾乎命中不到任何一條**，這是設計行為不是 bug。
 
@@ -901,7 +916,7 @@ cd /your/project
 <details>
 <summary><strong>Kiro (Amazon)</strong></summary>
 
-Amazon 的 Spec 驅動 AI IDE，基於 Claude 模型。每個智能體轉換為 JSON 設定 + 提示詞檔案，安裝到 `~/.kiro/agents/`（全域）。
+Amazon 的 Spec 驅動 AI IDE，基於 Claude 模型。每個智能體轉換為 JSON 配置 + 提示詞檔案，安裝到 `~/.kiro/agents/`（全域性）。
 
 ```bash
 ./scripts/convert.sh --tool kiro
@@ -922,7 +937,7 @@ kiro-cli --agent engineering-frontend-developer
 <details>
 <summary><strong>WorkBuddy (騰訊)</strong></summary>
 
-騰訊推出的全場景 AI 桌面智能體，相容 OpenClaw 技能，支援多模型切換。每個智能體轉換為 `SKILL.md` 技能檔案，安裝到 `~/.workbuddy/skills/`（全局）。
+騰訊推出的全場景 AI 桌面智能體，相容 OpenClaw 技能，支援多模型切換。每個智能體轉換為 `SKILL.md` 技能檔案，安裝到 `~/.workbuddy/skills/`（全域性）。
 
 ```bash
 ./scripts/convert.sh --tool workbuddy
@@ -933,29 +948,60 @@ kiro-cli --agent engineering-frontend-developer
 </details>
 
 <details>
+<summary><strong>CodeWhale（原 DeepSeek-TUI）</strong></summary>
+
+專為 DeepSeek 最佳化、對國內網路友好的終端程式設計 Agent（Rust 實現，原名 DeepSeek-TUI）。每個智能體轉換為 `SKILL.md` 技能檔案，安裝到 `~/.codewhale/skills/`（全域性），在 CodeWhale 裡用 `/skills` 載入。
+
+```bash
+./scripts/convert.sh --tool codewhale
+./scripts/install.sh --tool codewhale
+```
+
+安裝後在 CodeWhale 中輸入 `/skills` 即可看到並呼叫所有智能體。
+</details>
+
+<details>
 <summary><strong>Hermes Agent (NousResearch)</strong></summary>
 
-NousResearch 的開源 AI 智能體框架，支援技能系統、子代理編排、會話記憶。每個智能體轉換為 `SKILL.md` 技能檔案，按分類目錄安裝到 `~/.hermes/skills/`（全局）。
+NousResearch 的開源 AI 智能體框架，支援技能系統、子代理編排、會話記憶。每個智能體轉換為 `SKILL.md` 技能檔案，按分類目錄安裝到 `~/.hermes/skills/`（全域性）。
 
 ```bash
 ./scripts/convert.sh --tool hermes
 ./scripts/install.sh --tool hermes
 ```
 
-安裝後在 Hermes CLI 中可透過 `hermes skills` 查看和管理所有技能，或在對話中自然語言啟用。
+安裝後**推薦在 Hermes CLI** 中透過 `hermes skills` 檢視和管理所有技能，或在對話中自然語言啟用。
+
+> ⚠️ **Discord 模式下不要一次性全量安裝**
+>
+> Hermes 的 Discord 整合會把每一個 skill 註冊成 Discord 斜槓命令，Discord API 對 bot 所有命令的 JSON 序列化總長度有 **8000 字元硬上限**，超過後會返回 `error code 50035`（見 [issue #45](https://github.com/jnMetaCode/agency-agents-zh/issues/45)）。本倉庫有近 200 個 skill，一次裝全會直接炸 Discord。
+>
+> 解決辦法：在 Discord 中使用時請按**分類**分批安裝，用 `--category` 引數（可多次傳入）：
+>
+> ```bash
+> # 只裝 marketing 分類
+> ./scripts/install.sh --tool hermes --category marketing
+>
+> # 同時裝 engineering 和 design
+> ./scripts/install.sh --tool hermes --category engineering --category design
+> ```
+>
+> 可選分類：`academic, blender, company, design, engineering, finance, game-development, godot, hr, legal, marketing, paid-media, product, project-management, roblox-studio, sales, spatial-computing, specialized, supply-chain, support, testing, unity, unreal-engine`。
+>
+> Hermes CLI 本身沒有此限制，全量安裝可以繼續使用。
 </details>
 
 <details>
-<summary><strong>DeerFlow 2.0 (位元組跳動)</strong></summary>
+<summary><strong>DeerFlow 2.0 (字節跳動)</strong></summary>
 
-位元組跳動的開源 SuperAgent 框架，支援子代理、沙箱、持久記憶。每個智能體轉換為 `SKILL.md` 技能檔案。
+字節跳動的開源 SuperAgent 框架，支援子代理、沙箱、持久記憶。每個智能體轉換為 `SKILL.md` 技能檔案。
 
 ```bash
 ./scripts/convert.sh --tool deerflow
 ./scripts/install.sh --tool deerflow
 ```
 
-預設安裝到當前目錄的 `skills/custom/`。可透過環境變數自訂路徑：
+預設安裝到當前目錄的 `skills/custom/`。可透過環境變數自定義路徑：
 
 ```bash
 DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool deerflow
@@ -967,7 +1013,7 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 <details>
 <summary><strong>Qoder</strong></summary>
 
-轉換為 Qoder SubAgent 格式（Markdown + YAML frontmatter）並安裝到 `~/.qoder/agents/`（全域）或專案目錄 `.qoder/agents/`。
+轉換為 Qoder SubAgent 格式（Markdown + YAML frontmatter）並安裝到 `~/.qoder/agents/`（全域性）或專案目錄 `.qoder/agents/`。
 
 ```bash
 ./scripts/convert.sh --tool qoder
@@ -996,10 +1042,10 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 
 除翻譯外，本專案包含 **63 個原創智能體**，專為中國平臺和業務場景打造：
 
-- **平臺運營**：小紅書、抖音、微信公眾號/視頻號/小程序、B站、快手、微博、知乎
+- **平臺運營**：小紅書、抖音、微信公眾號/影片號/小程式、B站、快手、微博、知乎
 - **企業協作**：飛書、釘釘整合開發
-- **垂直領域**：跨境電商、政務ToG、醫療合規、高考志願、留學規劃、Qt 工業上位機、畜禽養殖檔案核對
-- **業務支撐**：私域流量、直播電商、庫存預測、合約審查、發票管理
+- **垂直領域**：跨境電商、政務ToG、醫療合規、高考志願、留學規劃、Qt 工業上位機、通用機械設計、畜禽養殖檔案核對
+- **業務支撐**：私域流量、直播電商、庫存預測、合同審查、發票管理
 
 > 在上方智能體陣容中標有 ⭐ 的即為原創智能體。
 
@@ -1019,7 +1065,7 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 ### 場景二：[小紅書品牌推廣](examples/workflow-xiaohongshu-launch.md)（完整流程）
 
 **你的團隊**：
-1. **小紅書運營** — 種草內容策略和達人合作
+1. **小紅書運營專家** — 種草內容策略和達人合作
 2. **內容創作者** — 產出種草筆記
 3. **品牌守護者** — 品牌調性把關
 4. **資料分析師** — 追蹤投放資料、出覆盤報告
@@ -1030,6 +1076,44 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 ## 貢獻
 
 歡迎參與！翻譯智能體、改進內容、新增中國平臺智能體都行。詳見 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+---
+
+## 交流 · Community
+
+<table>
+<tr>
+<td width="170" align="center">
+<img src="assets/qr-wechat.jpg" width="150" alt="微信公眾號 AI不止語 二維碼"><br>
+<sub>微信掃碼關注</sub>
+</td>
+<td>
+
+微信公眾號 **「AI不止語」**（微信搜尋 `AI_BuZhiYu`）— 技術問答 · 專案更新 · 實戰文章
+
+| 渠道 | 加入方式 |
+|------|---------|
+| QQ 2群 | [點選加入](https://qm.qq.com/q/EeNQA9xCxy)（群號 1071280067） |
+| 微信群 | 關注公眾號後回覆「群」獲取入群方式 |
+
+</td>
+</tr>
+</table>
+
+---
+
+## 姊妹專案
+
+| 專案 | 定位 | 一句話 |
+|------|------|-------|
+| **本專案**（agency-agents-zh） ![](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=flat&label=⭐) | 🎭 專家角色庫 | 277 個**即插即用** AI 專家，含 64 中國原創（小紅書 / 抖音 / 飛書 / 釘釘 / Qt 上位機 / 機械設計） |
+| [agency-orchestrator](https://github.com/jnMetaCode/agency-orchestrator) | 🚀 編排引擎 | 一句話 → 268 專家協作，**幾分鐘出方案**（10 家 LLM / 7 免費） |
+| [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) ![](https://img.shields.io/github/stars/jnMetaCode/superpowers-zh?style=flat&label=⭐) | 🧠 工作方法論 | 20 個 skills 教 AI 怎麼幹活（TDD / 除錯 / 程式碼審查等） |
+| [ai-coding-guide](https://github.com/jnMetaCode/ai-coding-guide) | 📖 實戰教程 | 66 個 Claude Code 技巧 + 9 款工具最佳實踐 + 配置模板 |
+| [shellward](https://github.com/jnMetaCode/shellward) | 🛡️ 安全中介軟體 | 8 層防禦 + DLP 資料流 + 注入檢測，**零依賴**（含 MCP Server） |
+| 🆕 [ai-shortfilm-prompts](https://github.com/jnMetaCode/ai-shortfilm-prompts) | 🎬 影片提示詞 | Mx-Shell《喪屍清道夫》5 段式方法論 + Skill，Seedance / 小云雀 / Sora / 可靈 / 即夢通用 |
+| 🆕 [local-agent-toolkit](https://github.com/jnMetaCode/local-agent-toolkit) | 🛠️ Agent 本地三件套 | 給 agent 配上**記憶 / 技能管理 / 執行追蹤**，零依賴、資料不出本機（engram · skillet · tracelet，npx 即用） |
+| 🆕 [codepet](https://github.com/jnMetaCode/codepet) | 🐾 桌面養成桌寵 | 碼寵 CodePet —— 你寫程式碼 / 用 Claude Code，它就漲經驗、升級、換狀態、跳舞。**全本地、隱私優先、開源** |
 
 ---
 
@@ -1048,10 +1132,16 @@ MIT License — 自由使用，商業或個人均可。
 
 <div align="center">
 
-**AI 智能體專家團隊：你的 AI 夢之隊**
+**277 個 AI 專家角色，18 種工具支援，即裝即用**
 
-[Star 本專案](https://github.com/jnMetaCode/agency-agents-zh) · [提交 Issue](https://github.com/jnMetaCode/agency-agents-zh/issues) · [貢獻程式碼](https://github.com/jnMetaCode/agency-agents-zh/pulls)
+[⭐ Star 本專案](https://github.com/jnMetaCode/agency-agents-zh) · [提交 Issue](https://github.com/jnMetaCode/agency-agents-zh/issues) · [貢獻程式碼](https://github.com/jnMetaCode/agency-agents-zh/pulls)
 
 基於 [agency-agents](https://github.com/msitarzewski/agency-agents) 翻譯並本土化
 
 </div>
+
+---
+
+## ⭐ Star 趨勢
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=jnMetaCode/agency-agents-zh&type=Date)](https://star-history.dera.page/#jnMetaCode/agency-agents-zh&Date)

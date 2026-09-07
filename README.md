@@ -18,9 +18,9 @@
 
 ### 📊 项目规模
 
-| 🤖 AI 智能体 | 🌏 英文版翻译 | 🇨🇳 中国市场原创 | 🧭 搜索增长方法论 | 🧠 支持工具 | 🏢 部门 |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| **277** | **213** | **63** | **1** | **18 种** | **20 个** |
+| 🤖 AI 智能体 | 🌏 英文版翻译 | 🇨🇳 中国市场原创 | 🧠 支持工具 | 🏢 部门 |
+|:---:|:---:|:---:|:---:|:---:|
+| **277** | **213** | **64** | **18 种** | **20 个** |
 
 > 📖 **官方配套课程** → [AI 专家团队实战](https://aiolaola.com/course/ai-agency?utm_source=github&utm_campaign=agents)（33 节，免费）：手把手把这仓 277 位专家用成一支团队——单兵点名、自动组队、一人公司全流程，桌面端零代码教学。另有 [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=agents)（180 节）＋ [从零构建 AI 智能体](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=agents)（40 节）
 >
@@ -385,14 +385,14 @@ cp -r marketing/*.md ~/.claude/agents/
 | [增长黑客](marketing/marketing-growth-hacker.md) | 快速获客、病毒循环、实验 | 用户增长、转化优化 |
 | [内容创作者](marketing/marketing-content-creator.md) | 多平台内容、编辑日历 | 内容策略、品牌故事 |
 | [社交媒体策略师](marketing/marketing-social-media-strategist.md) | 跨平台策略、整合营销 | 全渠道社交运营 |
-| [AEO 基础架构师](marketing/marketing-aeo-foundations.md) | 爬虫访问、索引、渲染与内容可访问性 | SEO、GEO 与浏览型 Agent 的技术地基 |
-| [SEO 与自然搜索增长专家](marketing/marketing-seo-specialist.md) | 搜索需求与意图、技术 SEO、内容架构与归因 | 自然搜索增长与转化 |
-| [AI 搜索可见性与 GEO 策略师](marketing/marketing-ai-citation-strategist.md) | 提示词审计、品牌提及与推荐、引用来源 | AI 搜索可见性与流量归因 |
-| [智能体任务完成优化师](marketing/marketing-agentic-search-optimizer.md) | 任务可发现性、工具选择、安全执行与后置条件 | 预约、购买、注册等任务完成 |
-| [搜索增长编排器](marketing/marketing-search-growth-orchestrator.md) | 路由四个专业 Agent，统一证据、优先级与路线图 | 跨层搜索增长规划 |
+| [SEO 与自然搜索增长专家](marketing/marketing-seo-specialist.md) | 技术 SEO、搜索意图、内容架构、收入归因 | Google 自然搜索增长 |
 | [轮播图增长引擎](marketing/marketing-carousel-growth-engine.md) | 轮播图内容、自动化投放 | 社交媒体轮播素材 |
 | [LinkedIn 内容创作专家](marketing/marketing-linkedin-content-creator.md) | LinkedIn 职场内容、B2B 获客 | LinkedIn 品牌建设 |
 | [图书联合作者](marketing/marketing-book-co-author.md) | 思想领袖力图书、代笔协作 | 图书策划与撰写 |
+| [AI 搜索可见性与 GEO 策略师](marketing/marketing-ai-citation-strategist.md) | AEO/GEO 优化、AI 平台可见性审计 | AI 搜索引擎品牌可见性 |
+| [搜索增长编排器](marketing/marketing-search-growth-orchestrator.md) ⭐ | AEO/SEO/GEO/Agentic 四层路由与统一路线图 | 搜索增长项目总协调 |
+
+> 🔍 搞不清 SEO / GEO / AEO / Agentic Search 该找谁？看 [Search Growth Stack](SEARCH-GROWTH-STACK.md) —— 五个搜索相关角色的职责边界与选人指南。
 
 ### 💰 付费媒体部
 
@@ -1106,7 +1106,7 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 
 | 项目 | 定位 | 一句话 |
 |------|------|-------|
-| **本项目**（agency-agents-zh） ![](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=flat&label=⭐) | 🎭 专家角色库 | 277 个**即插即用** AI 专家，含 63 中国原创（小红书 / 抖音 / 飞书 / 钉钉 / Qt 上位机 / 机械设计） |
+| **本项目**（agency-agents-zh） ![](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=flat&label=⭐) | 🎭 专家角色库 | 277 个**即插即用** AI 专家，含 64 中国原创（小红书 / 抖音 / 飞书 / 钉钉 / Qt 上位机 / 机械设计） |
 | [agency-orchestrator](https://github.com/jnMetaCode/agency-orchestrator) | 🚀 编排引擎 | 一句话 → 268 专家协作，**几分钟出方案**（10 家 LLM / 7 免费） |
 | [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) ![](https://img.shields.io/github/stars/jnMetaCode/superpowers-zh?style=flat&label=⭐) | 🧠 工作方法论 | 20 个 skills 教 AI 怎么干活（TDD / 调试 / 代码审查等） |
 | [ai-coding-guide](https://github.com/jnMetaCode/ai-coding-guide) | 📖 实战教程 | 66 个 Claude Code 技巧 + 9 款工具最佳实践 + 配置模板 |
