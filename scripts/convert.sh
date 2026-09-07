@@ -25,6 +25,8 @@
 #   hermes       — Hermes Agent skill 文件 (~/.hermes/skills/<category>/<slug>/SKILL.md)
 #   kiro         — Kiro agent .md 文件 (.kiro/agents/*.md，带 YAML frontmatter)
 #   qoder        — Qoder 自定义智能体文件 (.qoder/agents/*.md)
+#   zcode        — 智谱 ZCode subagent 文件 (~/.zcode/agents/*.md，带 YAML frontmatter)
+#   qwenpaw      — QwenPaw skill 文件 (~/.qwenpaw/skill_pool/<slug>/SKILL.md)
 #   all          — 所有工具（默认）
 #
 # 输出到仓库根目录下的 integrations/<tool>/。
@@ -552,6 +554,68 @@ ${body}
 HEREDOC
 }
 
+# 智谱 ZCode —— subagent 文件 ~/.zcode/agents/<slug>.md
+# 参考：https://zcode.z.ai/en/docs/subagents
+# 格式为带 YAML frontmatter 的 Markdown，name 与 description 必填，
+# 缺任一字段 ZCode 会忽略该文件；color 为可选字段。
+convert_zcode() {
+  local file="$1"
+  local description color slug outfile body
+
+  description="$(get_field "description" "$file")"
+  color="$(get_field "color" "$file")"
+  slug="$(slugify_from_file "$file")"
+  body="$(get_body "$file")"
+
+  outfile="$OUT_DIR/zcode/${slug}.md"
+  mkdir -p "$(dirname "$outfile")"
+
+  if [[ -n "$color" ]]; then
+    cat > "$outfile" <<HEREDOC
+---
+name: ${slug}
+description: ${description}
+color: ${color}
+---
+${body}
+HEREDOC
+  else
+    cat > "$outfile" <<HEREDOC
+---
+name: ${slug}
+description: ${description}
+---
+${body}
+HEREDOC
+  fi
+}
+
+# QwenPaw —— skill 目录 ~/.qwenpaw/skill_pool/<slug>/SKILL.md
+# 参考：https://github.com/agentscope-ai/QwenPaw/blob/main/website/public/docs/skills.zh.md
+# SKILL.md 必须带 YAML frontmatter，name 与 description 必填。
+# 手动放置的 skill 会在下次清单调和时被检测到，并以「禁用」状态写入 skill.json，
+# 需要在控制台启用后广播到工作区。
+convert_qwenpaw() {
+  local file="$1"
+  local description slug outdir outfile body
+
+  description="$(get_field "description" "$file")"
+  slug="$(slugify_from_file "$file")"
+  body="$(get_body "$file")"
+
+  outdir="$OUT_DIR/qwenpaw/$slug"
+  outfile="$outdir/SKILL.md"
+  mkdir -p "$outdir"
+
+  cat > "$outfile" <<HEREDOC
+---
+name: ${slug}
+description: ${description}
+---
+${body}
+HEREDOC
+}
+
 convert_kiro() {
   local file="$1"
   local name description slug body
@@ -677,6 +741,8 @@ run_conversions() {
         hermes)      convert_hermes      "$file" ;;
         kiro)        convert_kiro        "$file" ;;
         qoder)       convert_qoder       "$file" ;;
+        zcode)       convert_zcode       "$file" ;;
+        qwenpaw)     convert_qwenpaw     "$file" ;;
         aider)       accumulate_aider    "$file" ;;
         windsurf)    accumulate_windsurf "$file" ;;
       esac
@@ -703,7 +769,7 @@ main() {
     esac
   done
 
-  local valid_tools=("antigravity" "gemini-cli" "opencode" "cursor" "trae" "aider" "windsurf" "openclaw" "qwen" "codex" "deerflow" "workbuddy" "codewhale" "hermes" "kiro" "qoder" "all")
+  local valid_tools=("antigravity" "gemini-cli" "opencode" "cursor" "trae" "aider" "windsurf" "openclaw" "qwen" "codex" "deerflow" "workbuddy" "codewhale" "hermes" "kiro" "qoder" "zcode" "qwenpaw" "all")
   local valid=false
   for t in "${valid_tools[@]}"; do [[ "$t" == "$tool" ]] && valid=true && break; done
   if ! $valid; then
@@ -719,7 +785,7 @@ main() {
 
   local tools_to_run=()
   if [[ "$tool" == "all" ]]; then
-    tools_to_run=("antigravity" "gemini-cli" "opencode" "cursor" "trae" "aider" "windsurf" "openclaw" "qwen" "codex" "deerflow" "workbuddy" "codewhale" "hermes" "kiro" "qoder")
+    tools_to_run=("antigravity" "gemini-cli" "opencode" "cursor" "trae" "aider" "windsurf" "openclaw" "qwen" "codex" "deerflow" "workbuddy" "codewhale" "hermes" "kiro" "qoder" "zcode" "qwenpaw")
   else
     tools_to_run=("$tool")
   fi

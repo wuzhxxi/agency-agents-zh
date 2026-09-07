@@ -21,6 +21,8 @@
 #   workbuddy    — WorkBuddy skill 文件
 #   hermes       — Hermes Agent skill 文件
 #   kiro         — Kiro agent .md 文件（带 YAML frontmatter）
+#   zcode        — 智谱 ZCode subagent .md 文件（带 YAML frontmatter）
+#   qwenpaw      — QwenPaw skill 文件（<slug>\SKILL.md）
 #   all          — 所有工具（默认）
 
 param(
@@ -45,7 +47,7 @@ $AgentDirs = @(
 )
 
 $ValidTools = @("antigravity","gemini-cli","opencode","cursor","trae","aider",
-                "windsurf","openclaw","qwen","codex","deerflow","workbuddy","hermes","kiro","all")
+                "windsurf","openclaw","qwen","codex","deerflow","workbuddy","hermes","kiro","zcode","qwenpaw","all")
 
 # --- 颜色输出 ---
 function Write-OK   { param($msg) Write-Host "[OK]  $msg" -ForegroundColor Green }
@@ -336,6 +338,55 @@ $body
 "@ | Set-Content -Path (Join-Path $outDir "SKILL.md") -Encoding UTF8
 }
 
+function Convert-ZCode {
+    param([string]$File, [string[]]$Lines)
+    $description = Get-Field "description" $Lines
+    $color       = Get-Field "color" $Lines
+    $slug        = Get-Slug $File
+    $body        = Get-Body $Lines
+    $zcodeDir    = Join-Path $OutDir "zcode"
+    New-Item -ItemType Directory -Force -Path $zcodeDir | Out-Null
+    # 智谱 ZCode subagent 格式：带 YAML frontmatter 的 .md 文件
+    # 放置于 ~/.zcode/agents/<slug>.md，name 与 description 必填
+    # 参考：https://zcode.z.ai/en/docs/subagents
+    if ($color) {
+        @"
+---
+name: $slug
+description: $description
+color: $color
+---
+$body
+"@ | Set-Content -Path (Join-Path $zcodeDir "${slug}.md") -Encoding UTF8
+    } else {
+        @"
+---
+name: $slug
+description: $description
+---
+$body
+"@ | Set-Content -Path (Join-Path $zcodeDir "${slug}.md") -Encoding UTF8
+    }
+}
+
+function Convert-QwenPaw {
+    param([string]$File, [string[]]$Lines)
+    $description = Get-Field "description" $Lines
+    $slug        = Get-Slug $File
+    $body        = Get-Body $Lines
+    $outDir      = Join-Path $OutDir "qwenpaw\$slug"
+    New-Item -ItemType Directory -Force -Path $outDir | Out-Null
+    # QwenPaw skill 格式：<slug>\SKILL.md，name 与 description 必填
+    # 参考：https://github.com/agentscope-ai/QwenPaw/blob/main/website/public/docs/skills.zh.md
+    @"
+---
+name: $slug
+description: $description
+---
+$body
+"@ | Set-Content -Path (Join-Path $outDir "SKILL.md") -Encoding UTF8
+}
+
 function Convert-Kiro {
     param([string]$File, [string[]]$Lines)
     $description = Get-Field "description" $Lines
@@ -399,6 +450,8 @@ function Run-Conversions {
                 "workbuddy"   { Convert-WorkBuddy   $filePath $lines }
                 "hermes"      { Convert-Hermes      $filePath $lines }
                 "kiro"        { Convert-Kiro        $filePath $lines }
+                "zcode"       { Convert-ZCode       $filePath $lines }
+                "qwenpaw"     { Convert-QwenPaw     $filePath $lines }
                 "aider"       { Accumulate-Aider    $filePath $lines }
                 "windsurf"    { Accumulate-Windsurf $filePath $lines }
             }

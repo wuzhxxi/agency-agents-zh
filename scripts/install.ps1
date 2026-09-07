@@ -23,6 +23,8 @@
 #   workbuddy    — 复制到 %USERPROFILE%\.workbuddy\skills\（全局）
 #   hermes       — 复制到 %USERPROFILE%\.hermes\skills\（全局）
 #   kiro         — 复制到 %USERPROFILE%\.kiro\agents\（全局）
+#   zcode        — 复制到 %USERPROFILE%\.zcode\agents\（全局，智谱 ZCode）
+#   qwenpaw      — 复制到 %USERPROFILE%\.qwenpaw\skill_pool\（全局）
 #   all          — 安装所有已检测到的工具（默认）
 #
 # Hermes 专属参数：
@@ -57,7 +59,7 @@ $Home_        = $env:USERPROFILE
 
 $AllTools = @(
     "claude-code","copilot","antigravity","gemini-cli","opencode","openclaw",
-    "cursor","trae","aider","windsurf","qwen","codex","deerflow","workbuddy","hermes","kiro"
+    "cursor","trae","aider","windsurf","qwen","codex","deerflow","workbuddy","hermes","kiro","zcode","qwenpaw"
 )
 
 # --- 颜色输出 ---
@@ -118,6 +120,10 @@ function Detect-Tool {
         "kiro"        { (Get-Command kiro -ErrorAction SilentlyContinue) -or
                         (Get-Command kiro-cli -ErrorAction SilentlyContinue) -or
                         (Test-Path (Join-Path $Home_ ".kiro")) }
+        "zcode"       { (Get-Command zcode -ErrorAction SilentlyContinue) -or
+                        (Test-Path (Join-Path $Home_ ".zcode")) }
+        "qwenpaw"     { (Get-Command qwenpaw -ErrorAction SilentlyContinue) -or
+                        (Test-Path (Join-Path $Home_ ".qwenpaw")) }
         default       { $false }
     }
 }
@@ -141,6 +147,8 @@ function Get-ToolLabel {
         "workbuddy"   { "WorkBuddy      (%USERPROFILE%\.workbuddy\skills)" }
         "hermes"      { "Hermes Agent   (%USERPROFILE%\.hermes\skills)" }
         "kiro"        { "Kiro           (%USERPROFILE%\.kiro\agents)" }
+        "zcode"       { "ZCode          (%USERPROFILE%\.zcode\agents)" }
+        "qwenpaw"     { "QwenPaw        (%USERPROFILE%\.qwenpaw\skill_pool)" }
         default       { $ToolName }
     }
 }
@@ -433,6 +441,37 @@ function Install-Hermes {
     }
 }
 
+function Install-ZCode {
+    $src  = Join-Path $Integrations "zcode"
+    $dest = Join-Path $Home_ ".zcode\agents"
+    if (-not (Test-Path $src)) { Write-Err "integrations\zcode 不存在，请先运行 convert.ps1 -Tool zcode"; return }
+    New-Item -ItemType Directory -Force -Path $dest | Out-Null
+    # 智谱 ZCode subagent 格式：.md 文件（带 YAML frontmatter）
+    # 参考：https://zcode.z.ai/en/docs/subagents
+    $count = (Get-ChildItem -Path $src -Filter "*.md" | ForEach-Object { Copy-Item $_.FullName -Destination $dest; 1 } | Measure-Object -Sum).Sum
+    Write-OK "ZCode: $count 个智能体 -> $dest"
+    Write-Warn "提示: 编辑定义文件后需新开会话，运行中的会话不会热重载"
+    Write-Warn "提示: 对话框里用 @ 引用子智能体，或让 ZCode 自动选择"
+}
+
+function Install-QwenPaw {
+    $src  = Join-Path $Integrations "qwenpaw"
+    $dest = Join-Path $Home_ ".qwenpaw\skill_pool"
+    if (-not (Test-Path $src)) { Write-Err "integrations\qwenpaw 不存在，请先运行 convert.ps1 -Tool qwenpaw"; return }
+    $count = 0
+    Get-ChildItem -Path $src -Directory | ForEach-Object {
+        $skillFile = Join-Path $_.FullName "SKILL.md"
+        if (Test-Path $skillFile) {
+            $skillDest = Join-Path $dest $_.Name
+            New-Item -ItemType Directory -Force -Path $skillDest | Out-Null
+            Copy-Item $skillFile -Destination $skillDest
+            $count++
+        }
+    }
+    Write-OK "QwenPaw: $count 个 skills -> $dest"
+    Write-Warn "提示: 手动放入技能池的 skill 默认为「禁用」状态，需在控制台启用后广播到工作区"
+}
+
 function Install-Kiro {
     $src  = Join-Path $Integrations "kiro"
     $dest = Join-Path $Home_ ".kiro\agents"
@@ -465,6 +504,8 @@ function Install-Tool {
         "workbuddy"   { Install-WorkBuddy  }
         "hermes"      { Install-Hermes     }
         "kiro"        { Install-Kiro       }
+        "zcode"       { Install-ZCode      }
+        "qwenpaw"     { Install-QwenPaw    }
     }
 }
 
