@@ -21,13 +21,18 @@ jobs:
       - name: Install locked dependencies
         run: npm ci
 
+      - name: Check agent counts
+        run: npm run check:counts
+
+      - name: Lint agent structure
+        run: bash scripts/lint-agents.sh
+
       - name: Validate agent files and Search Growth registry
         run: npm run search-growth -- agents validate
 
       - name: Check for broken internal links
         run: |
           ERRORS=0
-          # Check README references to agent files
           while read -r link; do
             if [ ! -f "$link" ]; then
               echo "::error file=README.md::Broken link: $link"
