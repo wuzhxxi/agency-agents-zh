@@ -7,6 +7,9 @@ on:
 
 jobs:
   sync:
+    # This mirror belongs to the upstream maintainer. Forks keep the workflow
+    # for ancestry compatibility but must not attempt to push to that mirror.
+    if: github.repository == 'jnMetaCode/agency-agents-zh'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

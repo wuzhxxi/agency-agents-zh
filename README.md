@@ -22,7 +22,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 | **277** | **213** | **64** | **20 种** | **20 个** |
 
-> 📖 **官方配套课程** → [AI 专家团队实战](https://aiolaola.com/course/ai-agency?utm_source=github&utm_campaign=agents)（33 节，免费）：手把手把这仓 277 位专家用成一支团队——单兵点名、自动组队、一人公司全流程，桌面端零代码教学。另有 [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=agents)（180 节）＋ [从零构建 AI 智能体](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=agents)（40 节）
+> 📖 **官方配套课程** → [AI 专家团队实战](https://aiolaola.com/course/ai-agency?utm_source=github&utm_campaign=agents)（35 节，免费）：手把手把这仓 277 位专家用成一支团队——单兵点名、自动组队、一人公司全流程，桌面端零代码教学。另有 [从零学会 AI 编程](https://aiolaola.com/?utm_source=github&utm_campaign=agents)（182 节）＋ [从零构建 AI 智能体](https://aiolaola.com/course/ai-agent?utm_source=github&utm_campaign=agents)（40 节）（站上共 13 门课、648 节，**全部 ¥0**——另有 AI 绘画 / 写小说 / 漫剧 / 量化 / DeepSeek / 深度专注 等）
 >
 > 🌍 Also available in [English](https://aiolaola.com/en?utm_source=github&utm_campaign=agents) · [日本語](https://aiolaola.com/ja?utm_source=github&utm_campaign=agents) · [Español](https://aiolaola.com/es?utm_source=github&utm_campaign=agents) · [한국어](https://aiolaola.com/ko?utm_source=github&utm_campaign=agents) · [繁體中文](https://aiolaola.com/zh-Hant?utm_source=github&utm_campaign=agents)
 
@@ -41,21 +41,6 @@
 🎁 **通过[此链接](https://apinebula.ai/V6ekjG)注册并在充值时填写 "agent" 优惠码可享九折优惠！**
 
 <hr>
-
-<table>
-<tr>
-<td width="25%">
-  <a href="https://www.aicodemirror.ai/register?invitecode=XO5L7R">
-    <img src="assets/sponsor-aicodemirror.jpeg" alt="AICodeMirror — Claude / Codex / Gemini 官方高稳定中转服务，Codex 官方渠道低至 0.7 折" width="100%">
-  </a>
-</td>
-<td width="75%" valign="middle">
-
-感谢 [AICodeMirror](https://www.aicodemirror.ai/register?invitecode=XO5L7R) 赞助了本项目！AICodeMirror 提供 Claude / Codex / Gemini 官方高稳定中转服务，支持企业级高并发、极速开票、7×24 专属技术支持。Codex 官方渠道低至 0.7 折，充值更有折上折！🎁 **AICodeMirror 为 agency-agents-zh 项目的用户提供了特别福利，通过[此链接](https://www.aicodemirror.ai/register?invitecode=XO5L7R)注册的用户，可享受首充 8 折！**
-
-</td>
-</tr>
-</table>
 
 <table>
 <tr>
@@ -97,7 +82,7 @@
 </td>
 <td width="75%" valign="middle">
 
-感谢[优云智算](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)赞助了本项目！优云智算是UCloud旗下AI云平台，主打包月、按次的高性价比国模Agent Plan套餐，支持GLM5.2 低至49元/月起。同时提供官转稳定海外模型。支持接入 Claude Code、Codex 及 API 调用。支持企业高并发、7*24技术支持、自助开票。🎁 **通过[此链接](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)注册的用户，可得免费5元平台体验金！**
+感谢[优云智算](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)赞助本项目！优云智算是 UCloud 旗下 AI 云平台，主打包月、按次的高性价比国模 Agent Plan 套餐，支持 GLM-5.2，低至 49 元/月起。最新上线 H3 视频生成套餐包，768P 低至 8 分/秒，支持 2K 画质，最长 30s 视频生成。支持企业高并发、7×24 技术支持、自助开票。🎁 **通过[此链接](https://passport.compshare.cn/register?referral_code=ETD3L5JBM13CtKARkMORot&ytag=GPU_YY_YX_git_agency-agents)注册的用户，可得免费5元平台体验金！**
 
 </td>
 </tr>
@@ -158,6 +143,21 @@
 <td width="75%" valign="middle">
 
 感谢[秘塔科技](https://metaso.cn/minimax-h3/?s=gt533367)赞助了本项目！秘塔科技提供高性价比的 MiniMax H3 视频生成 API 服务，适合漫剧、营销视频及批量视频生成：768P 低至 0.09 元/秒、2K 0.15 元/秒，原生 2K 画质，支持音画同步。API 兼容 OpenAI 协议，支持 ComfyUI，无需自行部署模型和 GPU，开箱即用。🎁 **通过[此链接](https://metaso.cn/minimax-h3/?s=gt533367)注册，即可享受赠送额度及专属优惠！**
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="25%">
+  <a href="https://www.packyapi.ai/register?aff=js5W">
+    <img src="assets/sponsor-packycode.jpeg" alt="PackyCode — 稳定高效的 API 中转服务，统一域名与密钥接入主流大模型，97% 可用性，多分组低至 2 折，提供 Codex / Claude Code 高速通道" width="100%">
+  </a>
+</td>
+<td width="75%" valign="middle">
+
+感谢 [PackyCode](https://www.packyapi.ai/register?aff=js5W) 赞助了本项目！PackyCode 是一家稳定、高效的 API 中转服务商，一句话接入主流大模型。统一域名、统一密钥、智能容灾切换，97% 可用性。人民币 1:1 充值，无汇率、无手续费坑，多分组折扣低至 2 折起，提供专属 Codex / Claude Code 高速通道。支持 Stripe、支付宝、微信、银行卡、对公付款，对公付款可开票。🎁 **新用户通过[此链接](https://www.packyapi.ai/register?aff=js5W)注册，首充立享折扣，另赠 $1 免费体验额度！**
 
 </td>
 </tr>
@@ -1141,13 +1141,14 @@ DEERFLOW_SKILLS_DIR=/path/to/deerflow/skills/custom ./scripts/install.sh --tool 
 | 项目 | 定位 | 一句话 |
 |------|------|-------|
 | **本项目**（agency-agents-zh） ![](https://img.shields.io/github/stars/jnMetaCode/agency-agents-zh?style=flat&label=⭐) | 🎭 专家角色库 | 277 个**即插即用** AI 专家，含 64 中国原创（小红书 / 抖音 / 飞书 / 钉钉 / Qt 上位机 / 机械设计） |
-| [agency-orchestrator](https://github.com/jnMetaCode/agency-orchestrator) | 🚀 编排引擎 | 一句话 → 268 专家协作，**几分钟出方案**（10 家 LLM / 7 免费） |
+| [agency-orchestrator](https://github.com/jnMetaCode/agency-orchestrator) ![](https://img.shields.io/github/stars/jnMetaCode/agency-orchestrator?style=flat&label=⭐) | 🚀 编排引擎 | 一句话 → 276 专家协作，**几分钟出方案**（15 种大模型 / 11 种免 key） |
 | [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) ![](https://img.shields.io/github/stars/jnMetaCode/superpowers-zh?style=flat&label=⭐) | 🧠 工作方法论 | 20 个 skills 教 AI 怎么干活（TDD / 调试 / 代码审查等） |
-| [ai-coding-guide](https://github.com/jnMetaCode/ai-coding-guide) | 📖 实战教程 | 66 个 Claude Code 技巧 + 9 款工具最佳实践 + 配置模板 |
-| [shellward](https://github.com/jnMetaCode/shellward) | 🛡️ 安全中间件 | 8 层防御 + DLP 数据流 + 注入检测，**零依赖**（含 MCP Server） |
-| 🆕 [ai-shortfilm-prompts](https://github.com/jnMetaCode/ai-shortfilm-prompts) | 🎬 视频提示词 | Mx-Shell《丧尸清道夫》5 段式方法论 + Skill，Seedance / 小云雀 / Sora / 可灵 / 即梦通用 |
-| 🆕 [local-agent-toolkit](https://github.com/jnMetaCode/local-agent-toolkit) | 🛠️ Agent 本地三件套 | 给 agent 配上**记忆 / 技能管理 / 运行追踪**，零依赖、数据不出本机（engram · skillet · tracelet，npx 即用） |
-| 🆕 [codepet](https://github.com/jnMetaCode/codepet) | 🐾 桌面养成桌宠 | 码宠 CodePet —— 你写代码 / 用 Claude Code，它就涨经验、升级、换状态、跳舞。**全本地、隐私优先、开源** |
+| [ai-coding-guide](https://github.com/jnMetaCode/ai-coding-guide) ![](https://img.shields.io/github/stars/jnMetaCode/ai-coding-guide?style=flat&label=⭐) | 📖 实战教程 | 66 个 Claude Code 技巧 + 10 款工具最佳实践 + 配置模板 |
+| [shellward](https://github.com/jnMetaCode/shellward) ![](https://img.shields.io/github/stars/jnMetaCode/shellward?style=flat&label=⭐) | 🛡️ 安全中间件 | 8 层防御 + DLP 数据流 + 注入检测，**零依赖**（含 MCP Server） |
+| 🆕 [ai-shortfilm-prompts](https://github.com/jnMetaCode/ai-shortfilm-prompts) ![](https://img.shields.io/github/stars/jnMetaCode/ai-shortfilm-prompts?style=flat&label=⭐) | 🎬 视频提示词 | Mx-Shell《丧尸清道夫》5 段式方法论 + Skill，Seedance / 小云雀 / Sora / 可灵 / 即梦通用 |
+| 🆕 [local-agent-toolkit](https://github.com/jnMetaCode/local-agent-toolkit) ![](https://img.shields.io/github/stars/jnMetaCode/local-agent-toolkit?style=flat&label=⭐) | 🛠️ Agent 本地三件套 | 给 agent 配上**记忆 / 技能管理 / 运行追踪**，零依赖、数据不出本机（engram · skillet · tracelet，npx 即用） |
+| 🆕 [codepet](https://github.com/jnMetaCode/codepet) ![](https://img.shields.io/github/stars/jnMetaCode/codepet?style=flat&label=⭐) | 🐾 桌面养成桌宠 | 码宠 CodePet —— 你写代码 / 用 Claude Code，它就涨经验、升级、换状态、跳舞。**全本地、隐私优先、开源** |
+| 🆕 [openshorts](https://github.com/jnMetaCode/openshorts) ![](https://img.shields.io/github/stars/jnMetaCode/openshorts?style=flat&label=⭐) | 🎥 短视频生产线 | 开片 —— 文案进，成片出：脚本 / 配音 / 字幕 / 成片 / 发布包一条龙，**0 元 0 key 跑通第一条**，本地优先 |
 
 ---
 
